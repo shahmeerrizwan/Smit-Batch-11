@@ -1,0 +1,66 @@
+/* * {
+  background-color: black;
+  color: white;
+}
+
+p,
+h3 {
+  color: red;
+}
+
+.secPara {
+  color: green;
+}
+
+#abc {
+  color: blue;
+} */
+
+/* .myDiv  p {
+  color: green;
+}
+
+.myDiv2 + p{
+    color: red;
+} */
+
+table{
+    border: 2px solid black;
+    width: 70%;
+    height: 400px;
+    font-size: xx-large;
+    text-align: center;
+    font-style: italic;
+    font-weight: bolder;
+    margin: auto;
+    padding: 20px;
+    margin-top: 180px;
+    border-spacing: 10px;
+    background-color: blue;
+    /* border-collapse: collapse; */
+  }
+  
+  td, th{
+    border: 2px solid black;
+  }
+  
+  .even{
+    background-color: aqua;
+  }
+  
+  .odd{
+    background-color: lightgreen;
+  }
+  
+  .main{
+    background-color: black;
+    color: white;
+    
+  }
+  
+  td:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.2);
+    transition: 1s;
+  }
