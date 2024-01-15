@@ -1,0 +1,35 @@
+/* label{
+    display: inline-block;
+    width: 150px;
+}
+
+form, fieldset{
+    margin: auto;
+    width: 50%;
+}
+
+#mail{
+    background-image: url('https://w7.pngwing.com/pngs/5/598/png-transparent-email-computer-icons-mailbox-miscellaneous-cdr-angle.png');
+    background-size: 23px;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 23px;
+} */
+
+li{
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    font-size: 160%;
+}
+
+ul{
+    background-color: aqua;
+}
+
+
+button{
+    background-color: aqua;
+    border: 2px solid red;
+    
+}
