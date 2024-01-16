@@ -1,0 +1,99 @@
+html,
+body {
+  font-family: "Roboto", sans-serif;
+
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s;
+}
+
+.button {
+  width: 70px;
+  height: 70px;
+  padding: 5px;
+  margin: 0 4px;
+  border: none;
+  background-color: #2f2f2f;
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  background-color: #1b1919;
+  border-radius: 10px;
+}
+
+.top-btn {
+  width: 70px;
+  height: 70px;
+  padding: 5px;
+  margin: 0 4px;
+  border: none;
+  background-color: #9a9a9a;
+  color: black;
+  font-weight: bolder;
+  font-size: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.top-btn:hover {
+  background-color: #575353;
+}
+
+.right-btn {
+  width: 70px;
+  height: 70px;
+  padding: 5px;
+  margin: 0 4px;
+  border: none;
+  background-color: #ee9406;
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.right-btn:hover {
+  background-color: #bb7a11;
+}
+.placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.row {
+  margin: 8px 0;
+  color: #000000;
+}
+.row input {
+  width: 316px;
+  font-size: 200%;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  margin: 0;
+  padding: 10px 10px;
+  border: none;
+  text-align: right;
+}
+h1 {
+  color: #fffefe;
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+.container {
+  background-color: black;
+  padding: 15px;
+  position: absolute;
+  border: solid rgb(0, 0, 0);
+  border-radius: 20px;
+  margin: 50px 450px;
+}
