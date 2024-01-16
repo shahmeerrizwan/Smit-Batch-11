@@ -8,13 +8,10 @@ body {
     letter-spacing: 20px;
     font-size: 38px;
     padding: 8px 0;
-
   }
-  
   ul {
     display: inline-block;
   }
-  
   li {
     list-style: none;
     border-bottom: 13px solid turquoise;
