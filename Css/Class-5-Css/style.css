@@ -1,0 +1,71 @@
+body{
+    background-color: bisque;
+}
+
+.black{
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}
+
+.white{
+    display: inline-block;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+}
+
+#img-task{
+
+    /* position: relative;
+    top: -210px;
+    left: 20px; */
+
+
+
+    /* position: absolute; */
+    /* top: 10px; */
+    /* right: 100px; */
+    /* left: 1000px; */
+}
+
+
+/* static normal
+absolute
+relative
+sticky
+fixed */
+
+
+/* li{
+    display: inline-block;
+    width: 190px;
+    text-align: center;
+}
+
+ul{
+    background-color: aqua;
+    position: sticky;
+    top: 0;
+}
+
+img{
+    position: fixed;
+    bottom: 10px;
+    right: 50px;
+} */
+
+
+div{
+    border: 3px solid black;
+    width: 30%;
+}
+
+img{
+    width: 100%;
+}
+
+h4, p{
+    padding: 10px;
+}
