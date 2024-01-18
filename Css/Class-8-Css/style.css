@@ -1,0 +1,24 @@
+.abc {
+    color: white !important;
+  }
+  
+  .navbar {
+    word-spacing: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .navbar-brand {
+    margin-left: 10%;
+  }
+  
+  .btn {
+    border-radius: 12px;
+    padding: 10px;
+  }
+  /* 
+  
+  .carousel-item{
+      height: 100vh;
+  } */
