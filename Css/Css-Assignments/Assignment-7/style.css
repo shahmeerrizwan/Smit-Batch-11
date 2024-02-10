@@ -1,0 +1,44 @@
+.first {
+  height: 50px;
+  width: 50px;
+  background-color: aqua;
+  border: 2px solid black;
+  display: inline-block;
+}
+.main {
+  width: 50%;
+  margin: auto;
+}
+.green {
+  background-color: green !important;
+}
+.yellow {
+  background-color: yellow !important;
+}
+.white {
+  background-color: white !important;
+}
+.greendiv {
+  display: inline-block;
+  gap: 0;
+  border: none;
+}
+.circle {
+  border-radius: 40px;
+}
+.none {
+  height: 50px !important;
+  width: 55px !important;
+  border: none !important;
+}
+.nonee {
+  height: 50px;
+  width: 54px;
+  border: none;
+}
+.red {
+  background-color: red !important;
+}
+.blue {
+  background-color: blue !important;
+}
