@@ -1,0 +1,92 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    background-color: rgba(22, 22, 23, .8);
+    color: white;
+    gap: 7%;
+    justify-content: center;
+    height: 40px;
+    align-items: center;
+    font-size: x-large;
+    position: sticky;
+    top: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 1;
+}
+
+.main{
+    background-image: url('https://www.apple.com/v/home/bk/images/heroes/apple-vision-pro/hero_apple_vision_pro_avail__ecthwv10twsy_large.jpg');
+    width: 100vw;
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main2{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    justify-content: end;
+}
+
+a{
+    font-size: x-large;
+    text-decoration: none !important;
+}
+
+a:hover{
+    text-decoration: underline !important;
+}
+
+.main3{
+    background-image: url('https://www.apple.com/v/home/bk/images/heroes/apple-music-superbowl/hero_superbowl__fb7i8fog8iqi_large.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height:70vh;
+
+}
+
+.main4{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
+button{
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 30px !important;
+    border: none;
+    font-size: 30px !important;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.card{
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh !important;
+    display: flex;
+    align-items: center;
+    color: white !important;
+    box-shadow: -10px -10px 10px black;
+}
