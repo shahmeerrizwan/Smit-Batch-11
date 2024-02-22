@@ -16,7 +16,6 @@ var _abc = 24
 var roll_no = "CSC-204"
 
 
-
 document.write("firstName is: " + firstName)
 document.write("<br> Age is: " + _abc)
 document.write("<br> Roll no is: " + roll_no)
