@@ -11,6 +11,9 @@
 
 // document.write(eq)
 
+var whatsLeftOver = 9 % 3;
+console.log(whatsLeftOver);
+
 
 // var num = 10
 // var num2 = 20
@@ -36,10 +39,10 @@
 // var userName = "Ammar"
 // alert("Thanks, "+ userName)
 
-var num = +prompt("Enter value 1")
-var num2 = +prompt("Ener value 2")
+// var num = +prompt("Enter value 1")
+// var num2 = +prompt("Ener value 2")
 
-document.write(num + num2)
+// document.write(num + num2)
 
 
 // document.write(typeof(num))
