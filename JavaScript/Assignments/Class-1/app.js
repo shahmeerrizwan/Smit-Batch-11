@@ -9,7 +9,6 @@ let gMail = "shahmeerrizwan921@gmail.com"
 let address = "Federal B Area Karachi Pakistan"
 
 
-
 document.write(`
 <table border="1px">
 
