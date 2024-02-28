@@ -13,15 +13,18 @@ body {
 .main {
     background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/5e16108c-fd30-46de-9bb8-0b4e1bbbc509/1ff59121-777a-410e-afeb-6da82228426f/PK-en-20240205-popsignuptwoweeks-perspective_alpha_website_small.jpg");
     background-position: center center;
-    background-size: max(1700px, 100vw);
     background-repeat: no-repeat;
-    height: 644px;
+    background-size: max(2020px, 100vw);
     position: relative;
+    width: 100%;
+    height: 1130px;
+    top: -5px;
+    object-fit: contain;
 
 }
 
 .main .box {
-    height: 644px;
+    height: 1200px;
     width: 100%;
     opacity: 0.69;
     position: absolute;
@@ -41,8 +44,9 @@ nav {
 }
 
 nav img {
-    color: red;
-    width: 140px;
+    margin-top: 30px;
+
+    width: 35%;
     position: relative;
     z-index: 10;
 }
@@ -68,19 +72,19 @@ nav button {
 .hero> :nth-child(1) {
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
-    font-size: 48px;
+    font-size: 90px;
     text-align: center;
 }
 
 .hero> :nth-child(2) {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 50px;
     text-align: center;
 }
 
 .hero> :nth-child(3) {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
 }
 
@@ -109,14 +113,16 @@ nav button {
     font-size: 25px;
     border-radius: 4px;
     font-weight: 400;
-    height: 55px;
+    height: 69px;
 }
 
 .btn-red-sm {
     background-color: red;
     color: white;
-    height: 35px;
-    width: 80px;
+    height: 60px;
+    width: 140px;
+    font-size: 22px;
+
 }
 
 .hero-buttons {
@@ -129,13 +135,13 @@ nav button {
 .hero-buttons input {
     padding: 7px 101px 8px 14px;
     color: white;
-    font-size: 15px;
+    font-size: 30px;
     font-weight: bolder;
     border-radius: 4px;
     background-color: rgba(23, 23, 23, 0.7);
     border: 1px solid rgba(246, 238, 238, 0.5);
-    height: 40px;
-    width: 250px;
+    height: 50px;
+    width: 300px;
 }
 
 .first {
@@ -316,12 +322,18 @@ footer .questions {
 
 
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 800px) {
 
     .footer {
+        margin-right: 63px;
         display: grid;
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 89px;
+    }
+
+    footer .questions {
+        margin-bottom: 28px;
+        margin-right: 95px;
     }
 
     .questions {
@@ -340,4 +352,5 @@ footer .questions {
     display: flex;
     flex-direction: column;
     gap: 23px;
+    margin-right: 32px;
 }
