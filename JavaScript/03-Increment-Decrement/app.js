@@ -3,6 +3,27 @@
 // pre dec   1-> 0
 // post dec  1-> 0
 
+
+
+// JavaScript Arithmetic Operators:
+
+// The Addition(+) Operator
+// The Subtraction(-) Operator
+// The Multiplication(*) Operator
+// The Division(/) Operator
+// The Exponentiation(**) Operator
+// The Remainder(%) Operator
+// The Increment(++) Operator
+// The Decrement(--) Operator
+
+
+// The increment operator(++) adds 1 from the operand.
+
+// If it is placed after the operand, it returns the value before the increment.
+
+// If it is placed before the operand, it returns the value after the increment.
+
+
 // var num = 5
 
 // var eq = --num + num-- + num-- + --num + num
