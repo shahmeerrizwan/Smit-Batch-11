@@ -35,6 +35,9 @@
 // document.write(eq)
 // var eq = a++ + a++ + a+2 + b+10 + 10 + a++ + a++ + --b + b-20
 //           5  +  6  +  9  +  14  + 10 +  7  +  8  +  3  +   -17
+
+
+
 // var id = 1
 // var fname = "ali"
 // var lname = "abc"
