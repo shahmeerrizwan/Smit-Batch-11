@@ -79,6 +79,32 @@ for (var i = 1; i <= 10; i++) {
 
 
 
+// var arr = []
+// var userInp = +prompt("Enter value")
+// for (var i = 0; i < userInp; i++) {
+//     arr[i] = prompt("Jo bhi value")
+// }
+// document.write(arr)
 
+// var cities = ["karachi", "lahore", "islamabad", "multan", "peshawar"]
+// var userInp = prompt("Enter city name")
+// var match = false
 
+// for(var i=0; i<cities.length; i++){
+//     if(cities[i] == userInp){
+//         match = true
+//         alert("City found")
+//         break
+//     }
+// }
+// if(match == false){
+//     alert("city not found")
+// }
+
+// for(var i=0; i<=10; i++){
+//     if(i == 5){
+//         continue
+//     }
+//     document.write(i)
+// }
 
