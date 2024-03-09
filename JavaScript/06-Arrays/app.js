@@ -131,3 +131,27 @@
 
 // document.write(arr1)
 
+
+// array 6 methods
+
+// push("akhir se values daalta hai")
+// pop()      akhir se nikalta hai
+// shift()    shru se nikalta hai
+// unshift("shru se daalta hai")
+// slice(startingIndex,n-1) copy karta hai
+// splice(startingIndex,how many delete items,"adding new values")
+
+// var str = "my name is khan"
+// var str2 = str.slice(0,10)
+// document.write(str2)
+// document.write(str[4])
+// var arr = ["Saad","Ali"]
+// document.write(arr[0])
+
+
+// var str = "PAKISTAN"
+// var convert = str.toLowerCase()
+// document.write(convert)
+
+
+
