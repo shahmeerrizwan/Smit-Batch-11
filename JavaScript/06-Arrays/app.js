@@ -155,3 +155,34 @@
 
 
 
+
+var str = "sAYLANI"
+// var userInp = prompt("Enter word")
+// var firstAplha = userInp[0].toLowerCase()
+// var secondAplha = userInp.slice(1).toUpperCase()
+// var convert =  firstAplha + secondAplha
+
+// if(convert == str){
+//     alert(`han done hai`)
+// }
+// else{
+//     alert(`nikal bhai`)
+// }
+
+// Write a program to take two input strings. Using string
+// comparison, tell which string is greater than other or if they
+// both are equal.
+
+var a = prompt("Enter 1st word")
+var b = prompt("Enter 2nd word")
+
+if (a.length == b.length) {
+    alert("values are equal")
+}
+else if (a.length > b.length) {
+    alert("value 1 is greater than value 2")
+}
+
+else if (a.length < b.length) {
+    alert("value 2 is greater than value 1")
+}
