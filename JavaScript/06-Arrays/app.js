@@ -74,3 +74,60 @@
 
 // var a;
 // document.write(a)
+
+
+
+
+// var arr = [1, 0.1, "saad", true];
+//         0,  1,    2,    3
+// arr[4] = "huzaifa";
+
+
+// arr.unshift("sdfhsd")
+// arr.shift();
+
+// arr.splice(1, 1);
+
+// arr.splice(2, 0, "ali");
+// arr.splice(3, 1, "hsdfsl");
+
+// arr.slice()
+// var arr2 = arr.slice(1, 3);
+// n - 1
+
+// var arr2 = arr.slice(0, 3);
+
+// document.write(arr)
+// document.write("<br>",arr2)
+
+
+// var arr = ["aloo","piyaaz","matar","timatar","abc","def"]
+// arr.splice(2,-2)
+// document.write(arr)
+
+// var arr1 = arr.slice(1)
+
+
+
+// arr.push("keela","saib","phal")
+
+// arr.splice(2,2)
+
+// arr.splice(3,1,"peach")
+
+
+// arr.splice(0,3)
+
+// arr.splice(2,2,"smit")
+
+// arr.push("kheera","lassan")
+// arr.unshift("adrak","kaddu")
+// arr.pop()
+// arr.pop()
+// arr.shift()
+// arr.shift()
+
+// document.write(arr, "<br>")
+
+// document.write(arr1)
+
