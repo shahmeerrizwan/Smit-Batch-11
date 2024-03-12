@@ -97,3 +97,46 @@
 // } else {
 //     console.log("Invalid input. Please enter a single character.");
 // }
+
+
+
+
+// QUESTION NO 6 :
+
+
+
+// let userInput = prompt("Enter Anything");
+
+// if (!isNaN(userInput)) {
+//     alert("this is number")
+// } else if (/[a-z]/.test(userInput)) {
+//     alert("small letter")
+// } else if (/[A-Z]/.test(userInput)) {
+//     alert("capital letter")
+// }else {
+//     alert("Not a Number")
+// }
+
+
+
+// PRACTICE
+
+
+
+// let userInput = prompt("Enter Anything");
+
+// if (!isNaN(userInput) && userInput.length >= 2) {
+//     alert(` ${userInput} is Numbers`)
+// } else if (!isNaN(userInput) && userInput.length === 1) {
+//     alert(`${userInput} is only one letter`)
+// } else if (/[a-z]/.test(userInput) && userInput.length === 1) {
+//     alert(`${userInput} is Small Letter and only one letter`)
+// } else if (/[A-Z]/.test(userInput) && userInput.length === 1) {
+//     alert(`${userInput} is capital Letter and only one letter`)
+// } else if (/[A-Z]/.test(userInput)) {
+//     alert(`${userInput} is Alphabets In Upercase`)
+// } else if (/[a-z]/.test(userInput)) {
+//     alert(`${userInput} is Alphabets In lowercase`)
+// } else (
+//     alert("!Error")
+// )
