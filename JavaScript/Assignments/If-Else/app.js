@@ -140,3 +140,69 @@
 // } else (
 //     alert("!Error")
 // )
+
+
+
+
+// QUESTION NO 07 :
+
+// let calculate = +prompt("Enter a first Number ");
+// let operator = prompt("Enter a operator you want to perform only  + , - , * , / , % ");
+// let calculate2 = +prompt("Enter a secound Number ");
+
+
+// if (operator == "+") {
+//     alert(calculate + calculate2)
+// } else if (operator == "-") {
+//     alert(calculate - calculate2)
+// } else if (operator == "/") {
+//     alert(calculate / calculate2)
+// } else if (operator == "%") {
+//     alert(calculate % calculate2)
+// } else if (operator == "*") {
+//     alert(calculate * calculate2)
+// } else {
+//     alert("Empty ")
+// }
+
+
+
+
+// QUESTION NO 8 :
+
+
+// let time = +prompt("Enter Time");
+
+// if (time >= "0000 " && time < "1200") {
+//     alert("Good Morning")
+// } else if (time >= 1200 && time < 1700) {
+//     alert("Good Afternoon")
+// } else if (time >= 1700 && time < 2100) {
+//     alert("Good Evening")
+// } else {
+//     alert("Good Nyt")
+// }
+
+
+
+
+// QUESTION NO 9 :
+
+// let year = prompt("Enter a year");
+
+// if (!isNaN(year) && year.toString().length === 4) {
+//     if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+//         console.log(year + " is a leap year.");
+//     } else {
+//         console.log(year + " is not a leap year.");
+//     }
+// } else {
+//     console.log("Invalid input. Please enter a valid year in YYYY format.");
+// }
+
+
+
+
+
+
+
