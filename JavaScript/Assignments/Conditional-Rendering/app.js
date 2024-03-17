@@ -5,7 +5,6 @@
 // alert(`Hi, ${name}`)
 
 
-
 // QUESTION NO 2 :
 
 
