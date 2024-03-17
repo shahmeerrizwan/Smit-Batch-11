@@ -203,6 +203,64 @@
 
 
 
+// QUESTION NO 10 :
+
+
+// let correctPassword = "12345";
+
+// let userPassword = prompt("Enter your password:");
+
+// if (userPassword === "") {
+//     alert("Please enter your password.");
+// } else if (userPassword === correctPassword) {
+//     alert("Correct ! The password you entered matches the original password.");
+// } else {
+//     alert("Incorrect password.");
+// }
+
+
+
+
+// QUESTION NO 11 :
+
+
+// let firstName = prompt("Enter Your Name");
+// if (firstName == "fahad") {
+//     alert("Hello Fahad !");
+// } else {
+//     alert("You Are Not Fahad")
+// }
+
+
+
+// QUESTION NO 12 :
+
+
+// var greeting;
+// var hour = prompt("Enter hour");
+// if (hour <= 18) {
+//     greeting = "Good day";
+//     alert("Good Day")
+// }
+// else {
+//     greeting = "Good evening";
+//     alert("Good Evening")
+// }
+
+
+
+// QUESTION NO 13 :
+
+
+
+// const num1 = parseInt(prompt("Enter the first integer"));
+// const num2 = parseInt(prompt("Enter the second integer"));
+
+// if (num1 === num2) {
+//     console.log("Both numbers are equal.");
+// } else {
+//     console.log("The larger number is " + (num1 > num2 ? num1 : num2));
+// }
 
 
 

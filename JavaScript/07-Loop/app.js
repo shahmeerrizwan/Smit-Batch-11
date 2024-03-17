@@ -34,17 +34,17 @@
 
 // var i;
 
-// for(i=0; i<=10; i = i+2){
-//     document.write(i+". smit"+"<br>")
-// }
+for (i = 0; i <= 3000; i++) {
+    document.write(" NaN" + "<br>")
+}
 
 // for(var i=10; i > 0; i--){
 //     document.write(i, "<br>")
 // }
 
-for (var i = 1; i <= 10; i++) {
-    document.write(5 + " x " + i + " = " + 5 * i + "<br>")
-}
+// for (var i = 1; i <= 10; i++) {
+//     document.write(5 + " x " + i + " = " + 5 * i + "<br>")
+// }
 
 
 
@@ -165,12 +165,12 @@ for (var i = 1; i <= 10; i++) {
 //     document.write(arr[i]+ " "+ arr2+"<br>")
 // }
 
-for (var i = 1; i <= 100; i = i + 10) {
-    for (var j = i; j < i + 10; j++) {
-        document.write(j + " ")
-    }
-    document.write("<br>")
-}
+// for (var i = 1; i <= 100; i = i + 10) {
+//     for (var j = i; j < i + 10; j++) {
+//         document.write(j + " ")
+//     }
+//     document.write("<br>")
+// }
 
 
 
