@@ -32,7 +32,6 @@ body {
 
 nav {
   width: 74vw;
-  /* max-width: 74vw; */
   justify-content: space-between;
   margin: auto;
   display: flex;
