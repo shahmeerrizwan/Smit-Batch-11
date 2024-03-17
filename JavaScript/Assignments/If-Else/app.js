@@ -263,5 +263,126 @@
 // }
 
 
+// QUESTION NO 14 :
 
 
+// let num = +prompt("Write a Number");
+
+// if (num < 0) {
+//     console.log("The Number Is Negative");
+// } else if (num === 0) {
+//     console.log("The Number Is Zero");
+// }
+// else {
+//     console.log("The Number Is Positive");
+// }
+
+
+
+// QUESTION NO 15 :
+
+// const now = prompt("Enter a Time in Number like 13 = 1pm");
+
+
+// if (now >= 6 && now < 9) {
+//     console.log("Breakfast is served.");
+// } else if (now >= 11 && now <= 13) {
+//     console.log("Time for lunch.");
+// } else if (now >= 17 && now < 20) {
+//     console.log("It's dinner time.");
+// } else {
+//     console.log("Sorry, you'll have to wait, or go get a snack.");
+// }
+
+
+
+
+// QUESTION NO 16 :
+
+
+// let variable = true;
+
+// let variableType;
+
+// if (typeof variable === "number") {
+//     variableType = "number";
+// } else if (typeof variable === "string") {
+//     variableType = "string";
+// } else if (typeof variable === "boolean") {
+//     variableType = "boolean";
+// } else if (typeof variable === "undefined") {
+//     variableType = "undefined";
+// } else {
+//     variableType = "unknown";
+// }
+
+// console.log("The type of the variable is :", variableType);
+
+
+
+// QUESTION NO 17 :
+
+
+// const vovel = prompt("Enter a Alphabet");
+
+// const isVowel = ['a', 'e', 'i', 'o', 'u'].includes(vovel.toLowerCase());
+
+// if (isVowel) {
+//     console.log("True");
+// } else {
+//     console.log("False");
+// }
+
+
+
+
+// QUESTION NO 18 :
+
+
+// if (10 !== 8) {
+//     console.log(true);
+// } else {
+//     console.log(false);
+// }
+
+
+// QUESTION NO 19 :
+
+// let month = +prompt("Enter a Month Number");
+
+// if (month == 1) {
+//     alert("January")
+// } else if (month == 2) {
+//     alert("Febraury")
+// } else if (month == 3) {
+//     alert("March")
+// } else if (month == 4) {
+//     alert("April")
+// } else if (month == 5) {
+//     alert("May")
+// } else if (month == 6) {
+//     alert("June")
+// } else if (month == 7) {
+//     alert("July")
+// } else if (month == 8) {
+//     alert("August")
+// } else if (month == 9) {
+//     alert("September")
+// } else if (month == 10) {
+//     alert("October")
+// } else if (month == 11) {
+//     alert("November")
+// } else if (month == 12) {
+//     alert("December")
+// } else {
+//     alert("Enter a Correct Month Number")
+// }
+
+
+
+// QUESTION NO 20 :
+
+// const age = prompt("Enter your age ");
+// const voteable = age < 18 ? "Too young" : "Old enough";
+
+// console.log(voteable);
