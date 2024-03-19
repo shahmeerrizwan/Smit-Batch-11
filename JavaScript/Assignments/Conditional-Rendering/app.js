@@ -137,3 +137,111 @@
 
 //               Correct 
 
+
+// E)
+
+// if (true) {
+//     alert("True");  // TRUE
+// }
+// if (false) {
+//     alert("False"); //FALSE 
+// }
+
+
+// F)
+
+// if ("car" < "cat") {
+//     alert("car is smaller than cat");  // TRUE
+// }
+
+
+
+// QUESTION NO 9 )
+
+
+// let physicsMarks = +prompt("Enter Your Physics Marks");
+// let chemMarks = +prompt("Enter Your Chemistry Marks");
+// let mathMarks = +prompt("Enter Your Maths Marks");
+
+
+// let total = physicsMarks + chemMarks + mathMarks
+// let marks = 300;
+// let grade;
+// let remarks;
+
+// let percentage = total / marks * 100
+
+
+// if (percentage >= 80) {
+//     grade = "A-One Grade"
+//     remarks = "Excellent"
+// } else if (percentage >= 70) {
+//     grade = "A Grade"
+//     remarks = "Good"
+// }
+// else if (percentage >= 60) {
+//     grade = "B Grade"
+//     remarks = "You Need To Improve"
+// } else {
+//     grade = "Fail"
+//     remarks = "Sory"
+// }
+
+// document.write(`
+// <table border="2px">
+// <tr>
+// <th>Marks You Obtained</th>
+// <th>Marks Obtained in Physics</th>
+// <th>Marks Obtained in Chemistry</th>
+// <th>Marks Obtained in Maths</th>
+// <th>Total Marks</th>
+// <th>Percentage</th>
+// <th>Grade</th>
+// <th>Remarks</th>
+// </tr>
+// <tr>
+// <td>${total}</td>
+// <td>${physicsMarks}</td>
+// <td>${chemMarks}</td>
+// <td>${mathMarks}</td>
+// <td>${marks}</td>
+// <td>${percentage.toFixed(2)} %</td>
+// <td>${grade}</td>
+// <td>${remarks}</td>
+// </tr>
+// </table>
+// `)
+
+
+
+// QUESTION NO 10 ;
+
+let item1 = prompt("Enter a First item Name You Purchased");
+let item2 = prompt("Enter a Second item Name You Purchased");
+let price1 = +prompt("Enter a Price Of First Item");
+let price2 = +prompt("Enter a Price Of Second Item");
+let quantity1 = +prompt("Enter a Quantity Of First Item");
+let quantity2 = +prompt("Enter a Quantity Of Second Item");
+let shipping = 250;
+let price;
+let saveRupee;
+let finalPrice = price1 + price2
+if (finalPrice >= 2000) {
+    price = finalPrice - (finalPrice * 0.10)
+    saveRupee = finalPrice - price
+} else {
+    price = 0
+}
+document.write(`<h1>Shopping Cart</h1> 
+<br>
+You Purchased ${item1} & ${item2} .<br>
+The Price of Item 1 is ${price1} .<br>
+The Price of Item 2 is ${price2} . <br>
+The Quantity of Item 1 is ${quantity1} .<br>
+The Quantity of Item 2 is ${quantity2} .<br>
+<br>
+Shipping Charges ${shipping} .
+<br>
+Total Cost Of Your Order Is ${finalPrice} PKR .<br>
+Discount Price After 10% Discount is ${price} PKR Save Rupess is ${saveRupee} .
+`)
