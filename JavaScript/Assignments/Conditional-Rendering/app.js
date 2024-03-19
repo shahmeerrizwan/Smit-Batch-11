@@ -63,3 +63,77 @@
 // }
 
 
+
+
+// QUESTION NO 6 :
+
+
+// let maxAge = 20;
+// let currentAge = +prompt("Enter Your Age");
+
+// if (currentAge <= maxAge) {
+//     alert("You Are Wellcome")
+// }
+
+
+
+// QUESTION NO 7 :
+
+
+// let fuel = +prompt("Enter Your Car Fuel");
+
+// if (fuel <= 0.25) {
+//     alert("Please Refill The Fuel In Your Car")
+// } else {
+//     alert("No Need To Fuel")
+// }
+
+
+// QUESTION NO 8 :
+
+// A)
+// var a = 4;
+// if (++a === 5) {
+//     alert("given condition for variable a is true");
+// }
+
+//                    Correct
+
+
+// B)
+// var b = 82;
+// if (b++ === 83) {
+//     alert("given condition for variable b is true");
+// }
+
+//                    Incorrect // False
+
+
+// C)
+
+// var c = 12;
+// if (c++ === 13) {
+//     alert("condition 1 is true"); // FALSE
+// }
+// if (c === 13) {
+//     alert("condition 2 is true"); // TRUE
+// }
+// if (++c < 14) {
+//     alert("condition 3 is true"); // FALSE
+// }
+// if (c === 14) {
+//     alert("condition 4 is true");  // TRUE
+// }
+
+
+// D)
+
+// var materialCost = 20000;
+// var laborCost = 2000;
+// var totalCost = materialCost + laborCost;
+// if (totalCost === laborCost + materialCost) {
+//     alert("The cost equals");
+// }
+
+//               Correct 
+
