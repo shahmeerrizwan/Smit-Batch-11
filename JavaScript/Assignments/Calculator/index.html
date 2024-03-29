@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <center>
+      <div class="container">
+        <h1 class="text-center">Calculator</h1>
+        <div class="row">
+          <input class="input" type="text" placeholder="0" id="inp" />
+        </div>
+        <div class="row">
+          <button onclick="clearAll()" class="button top-btn">CE</button>
+          <button onclick="clearLast()" class="button top-btn">C</button>
+          <button onclick="btnClick('%')" class="button top-btn">%</button>
+          <button onclick="btnClick('/')" class="button right-btn">÷</button>
+        </div>
+        <div class="row">
+          <button onclick="btnClick(7)" class="button">7</button>
+          <button onclick="btnClick(8)" class="button">8</button>
+          <button onclick="btnClick(9)" class="button">9</button>
+          <button onclick="btnClick('*')" class="button right-btn">X</button>
+        </div>
+        <div class="row">
+          <button onclick="btnClick(4)" class="button">4</button>
+          <button onclick="btnClick(5)" class="button">5</button>
+          <button onclick="btnClick(6)" class="button">6</button>
+          <button onclick="btnClick('-')" class="button right-btn">-</button>
+        </div>
+        <div class="row">
+          <button onclick="btnClick(1)" class="button">1</button>
+          <button onclick="btnClick(2)" class="button">2</button>
+          <button onclick="btnClick(3)" class="button">3</button>
+          <button onclick="btnClick('+')" class="button right-btn">+</button>
+        </div>
+        <div class="row">
+          <button onclick="btnClick(0)" class="button">0</button>
+          <button onclick="btnClick('00')" class="button">00</button>
+          <button onclick="btnClick('.')" class="button">.</button>
+          <button onclick="eq()" class="button right-btn">=</button>
+        </div>
+      </div>
+    </center>
+    <script src="app.js"></script>
+  </body>
+</html>
