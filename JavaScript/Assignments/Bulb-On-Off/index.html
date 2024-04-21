@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        color: white;
+        background-color: cornflowerblue;
+        border: none;
+        padding: 8px;
+        font-weight: 600;
+        border-radius: 5px;
+        margin: auto;
+        top: 50%;
+        position: relative;
+      }
+      .btnoff {
+        margin: auto;
+        position: relative;
+
+        color: white;
+        top: 50%;
+        background-color: rgb(255, 0, 0);
+        border: none;
+        font-weight: 600;
+        padding: 8px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <img id="on" src="" alt="" />
+      <br />
+      <br />
+      <button class="btn" onclick="onBulb()">On Bulb</button>
+      <button class="btnoff" onclick="offBulb()">Off Bulb</button>
+    </center>
+
+    <script src="app.js"></script>
+  </body>
+</html>
