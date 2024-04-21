@@ -1,0 +1,41 @@
+body {
+  background-image: url("https://64.media.tumblr.com/8ce3b41ddedd50d7b5dcd34b7e6b4afa/92ecd3c1567b061a-fa/s640x960/e3e6035c3645af9f3e622f57cb85a5b8efba33d8.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  color: rgb(255, 196, 0);
+}
+.main {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.32);
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px rgba(130, 209, 26, 0.164),
+    inset 10px 10px 80px rgb(39, 38, 38);
+  position: relative;
+  top: 100px;
+}
+.clock {
+  top: 30%;
+  font-size: 140px;
+  position: relative;
+  font-weight: 900;
+  text-shadow: 8px 5px 8px rgb(65, 62, 62);
+}
+.name {
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(0, 87, 128);
+  top: 20%;
+  position: relative;
+  text-shadow: 8px 5px 8px rgb(65, 62, 62);
+  font-size: 120px;
+  font-weight: 900;
+}
+#minute {
+  color: rgb(0, 0, 0) !important;
+}
+#second {
+  color: chocolate;
+}
