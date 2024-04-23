@@ -246,6 +246,7 @@
 
 
 
+
 // const radius = prompt("Enter A Number You Want To Circumference And Area");
 // const circumference = 2 * Math.PI * radius;
 // const area = Math.PI * Math.pow(radius, 2);
@@ -258,5 +259,36 @@
 
 
 
+
+
+// QUESTION NO 12 :
+
+
+let num = +prompt("Enter a number");
+
+let preIncre = ++num;
+let postIncre = num++;
+let preDecre = --num;
+let postDecre = num--;
+
+document.write(`
+<center>
+<h1> Result </h1>
+The Value of ++a is : ${preIncre} <br>
+Now the Value of a is : ${preIncre} 
+<br>
+<br>
+The Value of a++ is : ${postIncre} <br>
+Now the Value of a is : ${postIncre}
+<br>
+<br>
+The Value of --a is : ${preDecre} <br>
+Now the value of a is : ${preDecre}
+<br>
+<br>
+The Value of a-- is : ${postDecre} <br>
+Now the Value of a is : ${postDecre}
+</center>
+`)
 
 
