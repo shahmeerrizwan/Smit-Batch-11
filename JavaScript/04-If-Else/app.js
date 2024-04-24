@@ -175,3 +175,20 @@ else {
 // }
 
 
+
+
+// var color = prompt('Enter color name')
+
+// switch (color) {
+//     case 'red':
+//         document.write('color is red')
+//         break;
+//     case 'green':
+//         document.write('color is green')
+//         break
+//     case 'yellow':
+//         document.write('color is yellow')
+//         break
+//     default:
+//         document.write('invalid color')
+// }
