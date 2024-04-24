@@ -176,7 +176,24 @@ for (i = 0; i <= 3000; i++) {
 
 
 
+// var num = 101
 
+// while(num <= 100){
+    // document.write(num)
+    // num++
+    // if(num % 2 == 1){
+    //     document.write(num+"<br>")
+    // }
+    // num++
+// }
+
+// var num = 101
+
+// do{
+//     document.write(num)
+//     num++
+// }
+// while(num <= 100)
 
 
 
