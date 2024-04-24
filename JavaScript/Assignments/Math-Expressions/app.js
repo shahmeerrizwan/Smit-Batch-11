@@ -264,31 +264,73 @@
 // QUESTION NO 12 :
 
 
-let num = +prompt("Enter a number");
+// let num = +prompt("Enter a number");
 
-let preIncre = ++num;
-let postIncre = num++;
-let preDecre = --num;
-let postDecre = num--;
+// let preIncre = ++num;
+// let postIncre = num++;
+// let preDecre = --num;
+// let postDecre = num--;
 
-document.write(`
-<center>
-<h1> Result </h1>
-The Value of ++a is : ${preIncre} <br>
-Now the Value of a is : ${preIncre} 
-<br>
-<br>
-The Value of a++ is : ${postIncre} <br>
-Now the Value of a is : ${postIncre}
-<br>
-<br>
-The Value of --a is : ${preDecre} <br>
-Now the value of a is : ${preDecre}
-<br>
-<br>
-The Value of a-- is : ${postDecre} <br>
-Now the Value of a is : ${postDecre}
-</center>
-`)
+// document.write(`
+// <center>
+// <h1> Result </h1>
+// The Value of ++a is : ${preIncre} <br>
+// Now the Value of a is : ${preIncre}
+// <br>
+// <br>
+// The Value of a++ is : ${postIncre} <br>
+// Now the Value of a is : ${postIncre}
+// <br>
+// <br>
+// The Value of --a is : ${preDecre} <br>
+// Now the value of a is : ${preDecre}
+// <br>
+// <br>
+// The Value of a-- is : ${postDecre} <br>
+// Now the Value of a is : ${postDecre}
+// </center>
+// `)
 
 
+
+
+
+// QUESTION NO 14 :
+
+
+
+// let a = 2; // 1
+// let b = 1; // 0 1
+
+// let result = --a - --b + ++b + b--;
+// //             1 -   0 +   1 + 1
+// document.write(`
+// a is ${a}
+// <br>
+// b is ${b}
+// <br>
+// Result is ${result}
+// `)
+
+
+
+// QUESTION NO 15 :
+
+
+// let favChips = prompt("Enter Your Favourite Snacks");
+// let currentAge = Number(prompt("Enter Your Current Age"));
+// let maximumAge = Number(prompt("Enter Your Maximum Age"));
+// let totalAge = maximumAge - currentAge;
+// let days = totalAge * 365;
+// let amountOfSnacksPerDay = 2;
+
+
+// document.write(`
+// You Will Need ${days * 2} ${favChips} to Last You Until The Ripe Old Age Of ${maximumAge} .
+// `)
+
+
+
+
+
+//                       COMPLETED 
