@@ -242,6 +242,7 @@
 // `)
 
 
+
 // QUESTION NO 12 :
 
 
@@ -261,7 +262,7 @@
 
 
 
-// QUESTION NO 12 :
+// QUESTION NO 13 :
 
 
 // let num = +prompt("Enter a number");
