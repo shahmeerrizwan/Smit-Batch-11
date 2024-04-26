@@ -2,6 +2,7 @@ const todo = document.querySelector('#todo');
 const ul = document.querySelector('#ul');
 
 const arr = [];
+
 function renderTodo() {
     for (let i = 0; i < arr.length; i++) {
         ul.innerHTML += `
@@ -11,17 +12,20 @@ function renderTodo() {
         </li>`
     }
 }
+
 function addTodo() {
     ul.innerHTML = '';
     arr.push(todo.value);
     renderTodo()
     todo.value = '';
 }
+
 function deleteTodo(i) {
     ul.innerHTML = '';
     arr.splice(i, 1);
     renderTodo()
 }
+
 function editTodo(i) {
     ul.innerHTML = '';
     const editedVal = prompt('enter value to update');
