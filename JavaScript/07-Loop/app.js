@@ -176,6 +176,24 @@ for (i = 0; i <= 3000; i++) {
 
 
 
+// var num = 101
+
+// while(num <= 100){
+    // document.write(num)
+    // num++
+    // if(num % 2 == 1){
+    //     document.write(num+"<br>")
+    // }
+    // num++
+// }
+
+// var num = 101
+
+// do{
+//     document.write(num)
+//     num++
+// }
+// while(num <= 100)
 
 
 
@@ -188,8 +206,17 @@ for (i = 0; i <= 3000; i++) {
 
 
 
-
-
+// var a = +prompt("Enter starting number ");
+// var b = +prompt("Enter ending number ");
+// function count(a, b) {
+//     for(var i=a; i<=b; i++) {
+//        num = i;
+//        console.log(num);
+//     }
+//     // return num;
+// }
+// // console.log(count(1, 4));
+// count(a, b);
 
 
 

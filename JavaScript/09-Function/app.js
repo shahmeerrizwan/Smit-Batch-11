@@ -117,3 +117,22 @@ function offBulb() {
 
 
 
+
+
+
+
+
+
+// function clicked(){
+//     document.getElementById('hide').innerHTML = ''
+// }
+
+
+// function func(e){
+//     console.log(e)
+// }
+
+
+// function func(){
+//     document.getElementById('show').style.display = 'block'
+// }
