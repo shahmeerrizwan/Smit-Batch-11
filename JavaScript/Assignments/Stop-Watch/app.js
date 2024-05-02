@@ -1,20 +1,29 @@
-
-var milisec = 0
-var seconds = 0
-var minutes = 0
-var getHtmlmsec = document.getElementById('msec')
-var getHtmlsec = document.getElementById('sec')
-var getHtmlmin = document.getElementById('min')
-
-setInterval(function () {
-    milisec++
-    getHtmlmsec.innerHTML = milisec
-    if (milisec >= 100) {
-        seconds++
-        getHtmlsec.innerHTML = seconds
-        milisec = 0
-    }
+let milisec = 0;
+let seconds = 0;
+let minutes = 0;
+let getHtmlmsec = document.getElementById('msec');
+let getHtmlsec = document.getElementById('sec');
+let getHtmlmin = document.getElementById('min');
 
 
+function start() {
 
-}, 10)
+
+    setInterval(function () {
+        milisec++;
+        getHtmlmsec.innerHTML = " : " + milisec + " milisec ";
+        if (milisec >= 100) {
+            seconds++;
+            getHtmlsec.innerHTML = " : " + seconds + " sec ";
+            milisec = 0;
+        }
+        if (seconds >= 60) {
+            minutes++;
+            getHtmlmin.innerHTML = minutes + " min ";
+            seconds = 0;
+        }
+    }, 10);
+
+}
+
+
