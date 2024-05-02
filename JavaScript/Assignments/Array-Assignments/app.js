@@ -29,6 +29,11 @@
 
 //  let flags = [true, false, true, false, true];
 
+// question no 6
+
+//  let mixedArray = [true, talha, 20, ];
+
+
 //question 7
 
 // let networks = ["Mobilink", "Telenor", "Zong", "Ufone", "Warid"];
