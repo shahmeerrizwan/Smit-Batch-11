@@ -32,7 +32,7 @@
 
 //Question no 5 :
 
-let text = "Pakistan";
-let character = text.charAt(4);
+// let text = "Pakistan";
+// let character = text.charAt(4);
 
-console.log(character);
+// console.log(character);
