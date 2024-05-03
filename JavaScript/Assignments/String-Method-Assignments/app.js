@@ -36,3 +36,12 @@
 // let character = text.charAt(4);
 
 // console.log(character);
+
+
+// Question no 6 :
+
+let firstName = prompt("Enter your First Name");
+let secondName = prompt("Enter Your Second Name");
+let named = firstName.concat(secondName)
+
+alert(" Wellcome " + named);
