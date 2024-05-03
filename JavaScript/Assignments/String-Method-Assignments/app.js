@@ -40,8 +40,8 @@
 
 // Question no 6 :
 
-let firstName = prompt("Enter your First Name");
-let secondName = prompt("Enter Your Second Name");
-let named = firstName.concat(secondName)
+// let firstName = prompt("Enter your First Name");
+// let secondName = prompt("Enter Your Second Name");
+// let named = firstName.concat(secondName)
 
-alert(" Wellcome " + named);
+// alert(" Wellcome " + named);
