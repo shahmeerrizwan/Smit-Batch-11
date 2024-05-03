@@ -61,7 +61,7 @@
 // Question No 8 :
 
 
-let message = "“Ali and Sami are best friends. They play cricket and football together.”";
-let newMessage = message.split("and").join("&");
+// let message = "“Ali and Sami are best friends. They play cricket and football together.”";
+// let newMessage = message.split("and").join("&");
 
-console.log(newMessage);
+// console.log(newMessage);
