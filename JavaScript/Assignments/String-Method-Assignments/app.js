@@ -28,3 +28,11 @@
 
 // let text = "Hello World";
 // console.log(text.lastIndexOf("l"));
+
+
+//Question no 5 :
+
+let text = "Pakistan";
+let character = text.charAt(4);
+
+console.log(character);
