@@ -51,7 +51,7 @@
 // Question no 7 :
 
 
-let city1 = "Hyderabad";
-let city = city1.split("Hyder").join("Islam");
+// let city1 = "Hyderabad";
+// let city = city1.split("Hyder").join("Islam");
 
-console.log(city);
+// console.log(city);
