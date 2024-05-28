@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      Wellcome Back <span id="username"></span>
+      <script>
+        var savedName = localStorage.getItem("email");
+
+        // Get the span element where we'll display the username
+        var usernameElement = document.getElementById("username");
+
+        // Check if a name was saved in localStorage
+        if (savedName) {
+          // If a name exists, update the text content of the span element with the saved name
+          usernameElement.textContent = savedName;
+        } else {
+          // If no name exists, display a default message
+          usernameElement.textContent = "Guest";
+        }
+      </script>
+    </h1>
+  </body>
+</html>
