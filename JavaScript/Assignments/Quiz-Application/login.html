@@ -2,18 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
     <div>
-      <h1>Signup user</h1>
-      <label>
-        Name:
-        <br />
-        <input type="text" id="userName" />
-      </label>
-      <br />
+      <h1>Login user</h1>
       <label>
         Email:
         <br />
@@ -26,15 +21,10 @@
         <input type="password" id="password" />
       </label>
       <br />
-      <button onclick="event.preventDefault(); signup(event)">Signup</button>
-      <button>
-        <a href="login.html" onclick="event.preventDefault(); login(event)"
-          >go to login</a
-        >
-      </button>
+      <button onclick="login()">Login</button>
+      <a href="index.html">go to signup</a>
     </div>
 
-    <div id="dataDisplay"></div>
     <script src="app.js"></script>
   </body>
 </html>

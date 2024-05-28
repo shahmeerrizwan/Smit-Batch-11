@@ -128,7 +128,7 @@
 //     // console.log(storedData);
 //   } else {
 //       display.textContent = 'No data found in localStorage.';
-//   }
+//   }3
 
 
 // const storedData = JSON.parse(localStorage.getItem('data'));
@@ -183,7 +183,7 @@ function signup(event) {
 
     // Check if the email already exists
     let existingUser = allUsers.find(user => user.email === email);
-    localStorage.setItem('name', name.value)
+    localStorage.setItem('name', name)
     if (existingUser) {
         alert("Email already registered Go And Login Your Account");
         email = "";
