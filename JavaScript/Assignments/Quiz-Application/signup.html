@@ -2,33 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
+    <title>Sign Up Page</title>
     <link rel="stylesheet" href="login.css" />
   </head>
   <body>
+    <div id="dataDisplay"></div>
+
     <div class="container">
       <div class="backbox">
         <div class="loginMsg">
           <div class="textcontent">
-            <p class="title">Don't have an account?</p>
-            <p>Sign Up Now.</p>
-            <a href="/signup.html"> <button id="switch1">Sign Up</button></a>
+            <p class="title">have an account?</p>
+            <p>Log in to attend your Quiz.</p>
+            <a href="/login.html"><button id="switch1">Log In</button></a>
           </div>
         </div>
         <div class="signupMsg visibility">
           <div class="textcontent">
             <p class="title">Have an account?</p>
             <p>Log in to see all your collection.</p>
-            <button id="switch2">LOG IN</button>
+            <button class="btn">LOG IN</button>
           </div>
         </div>
       </div>
       <div class="frontbox">
         <div class="login">
-          <h2>Log In</h2>
+          <h2>Sign Up</h2>
           <div class="inputbox">
+            <input
+              type="text"
+              name="fullname"
+              required
+              id="userName"
+              placeholder="FULLNAME"
+            />
             <input
               type="text"
               required
@@ -39,12 +47,14 @@
             <input
               type="password"
               name="password"
-              id="password"
               required
+              id="password"
               placeholder="PASSWORD"
             />
           </div>
-          <button onclick="login()">Log In</button>
+          <button onclick="event.preventDefault(); signup(event)">
+            Sign Up
+          </button>
         </div>
       </div>
     </div>

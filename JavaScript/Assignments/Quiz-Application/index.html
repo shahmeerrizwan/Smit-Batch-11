@@ -3,62 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up Page</title>
-    <link rel="stylesheet" href="login.css" />
+    <title>Home Page</title>
+    <style>
+      body {
+        background-image: url("./bg-1.jpg");
+        background-repeat: no-repeat;
+        background-size: 60% 80vh;
+        background-position: top;
+      }
+      .btn-1 {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 85vh;
+      }
+      .btn-1 button {
+        border: 3px solid transparent;
+        color: white;
+        background: #14192c;
+        padding: 1px 2px;
+        line-height: 1.75;
+        transition: 0.6s;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100px !important;
+        box-shadow: 2px 2px 3px #999;
+      }
+      .btn-1 button:hover {
+        transition: 0.6s;
+        background: white;
+        color: black;
+        border: 3px solid rgb(43 48 53);
+      }
+    </style>
   </head>
   <body>
-    <div id="dataDisplay"></div>
-
-    <div class="container">
-      <div class="backbox">
-        <div class="loginMsg">
-          <div class="textcontent">
-            <p class="title">have an account?</p>
-            <p>Log in to attend your Quiz.</p>
-            <a href="/login.html"><button id="switch1">Log In</button></a>
-          </div>
-        </div>
-        <div class="signupMsg visibility">
-          <div class="textcontent">
-            <p class="title">Have an account?</p>
-            <p>Log in to see all your collection.</p>
-            <button class="btn">LOG IN</button>
-          </div>
-        </div>
-      </div>
-      <div class="frontbox">
-        <div class="login">
-          <h2>Sign Up</h2>
-          <div class="inputbox">
-            <input
-              type="text"
-              name="fullname"
-              required
-              id="userName"
-              placeholder="FULLNAME"
-            />
-            <input
-              type="text"
-              required
-              name="email"
-              id="email"
-              placeholder="EMAIL"
-            />
-            <input
-              type="password"
-              name="password"
-              required
-              id="password"
-              placeholder="PASSWORD"
-            />
-          </div>
-          <button onclick="event.preventDefault(); signup(event)">
-            Sign Up
-          </button>
-        </div>
-      </div>
+    <div class="btn-1">
+      <a href="/signup.html"><button>Start Quiz</button></a>
     </div>
-
-    <script src="login.js"></script>
   </body>
 </html>

@@ -68,7 +68,41 @@ label {
   justify-content: space-between;
   display: flex;
 }
+button:disabled {
+  cursor: not-allowed;
+}
+button:disabled:hover {
+  border: 3px solid transparent;
+  color: white;
+  background: #14192c;
+  padding: 1px 2px;
+  line-height: 1.75;
+  transition: 0.6s;
+  border-radius: 4px;
+  width: 100px !important;
+  box-shadow: 2px 2px 3px #999;
+}
 
+#ten-countdown {
+  border: 5px solid #004853;
+  display: flex;
+  padding: 1px;
+  color: #004853;
+  width: 10%;
+  font-family: Verdana, sans-serif, Arial;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.right {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 30px;
+  margin-right: 140px;
+}
 /* FOOTER  */
 
 footer {
