@@ -28,14 +28,14 @@
     <!-- BODY  -->
     <div class="top-head">
       <h1>
-        Welcome Back <span id="userName"> </span>
+        Welcome <span id="userName"> </span>
         <script>
           const uname = JSON.parse(localStorage.getItem("users"));
           if (uname && uname.length > 0) {
             const recentUser = uname[uname.length - 1];
             document.write(recentUser.userName);
           } else {
-            document.write("No recent user found");
+            document.write("No user found");
           }
         </script>
         👋
@@ -90,6 +90,16 @@
         </div>
       </div>
     </div>
+
+    <div class="modal" id="resultModal">
+      <div class="modal-content">
+        <h1>Result</h1>
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p id="resultText"></p>
+        <p id="correct"></p>
+      </div>
+    </div>
+
     <!-- BODY END  -->
 
     <!-- FOOTER -->

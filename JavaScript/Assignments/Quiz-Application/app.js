@@ -82,6 +82,33 @@ var opt3 = document.getElementById('opt3');
 var sec = document.getElementById('sec');
 
 
+function displayResult() {
+    var result = (score / questions.length) * 100 + "%";
+    var resultText = document.getElementById('resultText');
+    var correct = document.getElementById('correct');
+
+    if (score >= 7) {
+        resultText.innerText = " Congratulations you are Pass 🥹❤️ and Got  " + result;
+        correct.innerText = "Your Correct MCQS is " + score;
+
+    } else {
+        resultText.innerText = "Fail 🫡 and you Got : " + result;
+        correct.innerText = "Your Correct MCQS is " + score;
+
+
+    }
+    var modal = document.getElementById("resultModal");
+    modal.style.display = "block";
+}
+
+function closeModal() {
+    var modal = document.getElementById("resultModal");
+    modal.style.display = "none";
+    index = 0;
+    score = 0;
+    nextQuestion();
+}
+
 
 function nextQuestion() {
     var options = document.getElementsByName('ans');
@@ -100,6 +127,8 @@ function nextQuestion() {
     }
     if (index > questions.length - 1) {
         console.log((score / questions.length) * 100 + "%")
+        displayResult()
+        i = 0
     }
     else {
         ques.innerText = questions[index].question;
@@ -111,6 +140,7 @@ function nextQuestion() {
 }
 
 nextQuestion()
+
 
 function skip() {
     index++;
