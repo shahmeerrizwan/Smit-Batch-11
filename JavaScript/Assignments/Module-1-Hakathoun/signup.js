@@ -28,7 +28,6 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app)
 
 
-// SIGNUP CODE
 
 let frstName = document.getElementById("finp");
 let secName = document.getElementById("sinp");
@@ -42,6 +41,12 @@ let registerUser = e => {
 
     createUserWithEmailAndPassword(auth, emailInp.value, passInp.value)
         .then((credential) => {
+            set(ref(db, 'User' + credential.user.uid), {
+                firstName: frstName.value,
+                LastName: secName.value,
+                Email: emailInp.value,
+                Password: passInp.value
+            })
             console.log(credential);
         }).catch(() => {
             alert(error.message)

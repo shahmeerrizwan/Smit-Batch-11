@@ -304,6 +304,13 @@ body.dark .search-field i {
   margin-top: 10px;
   cursor: pointer;
 }
+.log-out {
+  color: white;
+  margin: 1px;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
 @media (max-width: 790px) {
   nav .nav-bar .sidebarOpen {
     display: block;
