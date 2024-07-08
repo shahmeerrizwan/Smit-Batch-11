@@ -36,8 +36,7 @@
 
         <div class="darkLight-searchBox">
           <div class="dark-light">
-            <i class="bx bx-moon moon"></i>
-            <i class="bx bx-sun sun"></i>
+            <i class="bx bx-cart cart"></i>
           </div>
 
           <div class="searchBox">
@@ -51,24 +50,56 @@
               <i class="bx bx-search"></i>
             </div>
           </div>
-          <div class="login-box" id="openModalText">
-            <img src="./Assets/login.png" alt="" />
+          <div class="login-box dropdown">
+            <img class="dropbtn" src="./Assets/login.png" alt="" />
+            <div class="dropdown-content">
+              <a href="#" id="openSignup">SignUp as Admin</a>
+              <a href="#" id="loginAsAdmin">SignUp as User</a>
+              <a href="#" id="signupAsUser">Login as Admin</a>
+              <a href="#" id="userLogin">Login as User</a>
+            </div>
           </div>
         </div>
       </div>
     </nav>
     <!-- Navbar End -->
 
-    <!-- Modal -->
+    <!-- Admin Signup Modal  -->
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>Modal Content</h2>
+        <h2>Admin SignUp</h2>
         <p>This is a modal window. Click the &times; to close.</p>
       </div>
     </div>
     <!-- Modal End -->
-
+    <!-- Admin Login Modal  -->
+    <div id="myModal2" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Admin Login</h2>
+        <p>This is a modal window. Click the &times; to close.</p>
+      </div>
+    </div>
+    <!-- Modal End -->
+    <!-- User Signup Modal  -->
+    <div id="myModal3" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>User SignUp</h2>
+        <p>This is a modal window. Click the &times; to close.</p>
+      </div>
+    </div>
+    <!-- Modal End -->
+    <!-- User Admin Modal  -->
+    <div id="myModal4" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>User Login</h2>
+        <p>This is a modal window. Click the &times; to close.</p>
+      </div>
+    </div>
+    <!-- Modal End -->
     <!-- Body -->
 
     <div class="main">
@@ -96,7 +127,14 @@
       <img src="./Assets/pizza card.png" alt="" />
     </div>
     <div class="img-5">
-      <img src="./Assets/delivery card.png" alt="" />
+      <img class="w-d" src="./Assets/delivery card.png" alt="" />
+      <img class="img-6" src="./Assets/particals.png" alt="" />
+    </div>
+    <div class="img-7">
+      <img src="./Assets/fire  emoji.png" alt="" />
+    </div>
+    <div class="img-8">
+      <img src="./Assets/happy emoji.png" alt="" />
     </div>
     <script src="navbar.js"></script>
   </body>
