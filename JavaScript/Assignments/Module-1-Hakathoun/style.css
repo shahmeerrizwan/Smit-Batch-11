@@ -33,7 +33,7 @@
   color: white;
   font-weight: 600;
   margin-top: 30px;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 .img-2 img {
   width: 50%;
