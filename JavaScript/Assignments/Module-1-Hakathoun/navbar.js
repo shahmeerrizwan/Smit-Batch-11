@@ -72,3 +72,57 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setActiveLink();
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the open modal text element
+    var openModalText = document.getElementById("openModalText");
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the close button
+    var closeButton = modal.getElementsByClassName("close")[0];
+
+    // Function to show the modal
+    function showModal() {
+        modal.style.display = "block";
+        // Disable scrolling on the body
+        document.body.style.overflow = "hidden";
+        // Store modal state in localStorage
+        localStorage.setItem("modalOpen", "true");
+    }
+
+    // Function to hide the modal
+    function hideModal() {
+        modal.style.display = "none";
+        // Enable scrolling on the body
+        document.body.style.overflow = "auto";
+        // Remove modal state from localStorage
+        localStorage.removeItem("modalOpen");
+    }
+
+    // Check localStorage on page load to decide whether to show the modal
+    var isModalOpen = localStorage.getItem("modalOpen");
+    if (isModalOpen) {
+        showModal();
+    }
+
+    // When the user clicks the text, open the modal
+    openModalText.onclick = function () {
+        showModal();
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    closeButton.onclick = function (event) {
+        hideModal();
+        event.stopPropagation(); // Prevent the event from bubbling up
+    }
+
+
+
+});
+
+

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
@@ -50,14 +51,53 @@
               <i class="bx bx-search"></i>
             </div>
           </div>
-          <div class="login-box">
-            <i class="bx bxs-user-circle login-icon"></i>
-            <span class="login-text">Login</span>
+          <div class="login-box" id="openModalText">
+            <img src="./Assets/login.png" alt="" />
           </div>
         </div>
       </div>
     </nav>
     <!-- Navbar End -->
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Modal Content</h2>
+        <p>This is a modal window. Click the &times; to close.</p>
+      </div>
+    </div>
+    <!-- Modal End -->
+
+    <!-- Body -->
+
+    <div class="main">
+      <div class="left">
+        <img
+          class="img-1"
+          src="./Assets/Grab Big Deals on Yummy Meals!.png"
+          alt=""
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          delectus mollitia modi harum illum ratione numquam aliquid qui autem
+          optio!
+        </p>
+        <button>Get Started</button>
+        <div class="img-2">
+          <img src="./Assets/happy customer.png" alt="" />
+        </div>
+      </div>
+      <div class="right">
+        <img class="img-3" src="./Assets/food img.png" alt="" />
+      </div>
+    </div>
+    <div class="img-4">
+      <img src="./Assets/pizza card.png" alt="" />
+    </div>
+    <div class="img-5">
+      <img src="./Assets/delivery card.png" alt="" />
+    </div>
     <script src="navbar.js"></script>
   </body>
 </html>

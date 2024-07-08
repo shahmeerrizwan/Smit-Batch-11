@@ -1,0 +1,68 @@
+.img-1 {
+  width: 90%;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  position: relative;
+  top: 80px;
+  margin-left: 40px;
+  width: 50%;
+}
+.right {
+  position: relative;
+  top: 60px;
+  margin-left: 40px;
+  width: 45%;
+}
+.left p {
+  font-size: 12px;
+  color: white;
+  margin-top: 5px;
+  font-weight: 400;
+}
+.left button {
+  background-color: #f7b41a;
+  border: none;
+  border-radius: 50px;
+  height: 35px;
+  width: 120px;
+  color: white;
+  font-weight: 600;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.img-2 img {
+  width: 50%;
+  margin-top: 20px;
+}
+.img-3 {
+  width: 80%;
+  margin-left: 30px;
+}
+.img-4 {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  bottom: 260px;
+}
+.img-4 img {
+  width: 20%;
+  position: relative;
+  top: 200px;
+  overflow: hidden;
+}
+.img-5 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 220px;
+}
+.img-5 img {
+  width: 30%;
+  position: relative;
+  left: 60px;
+}
