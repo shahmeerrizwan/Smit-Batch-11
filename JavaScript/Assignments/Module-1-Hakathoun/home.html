@@ -9,7 +9,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="navbar.css" />
+    <style>
+      div {
+        color: white;
+      }
+      h1 {
+        color: white;
+      }
+    </style>
   </head>
+
   <body>
     <!-- Navbar Start -->
     <nav>
@@ -42,13 +51,13 @@
               <i class="bx bx-x cancel"></i>
               <i class="bx bx-search search"></i>
             </div>
-
             <div class="search-field">
               <input type="text" placeholder="Search..." />
               <i class="bx bx-search"></i>
             </div>
           </div>
-          <div class="Log-out" id="signoutbutton">
+
+          <div class="Log-out" id="logout">
             <i class="bx bx-log-out log-out">LogOut</i>
           </div>
         </div>
@@ -56,9 +65,11 @@
     </nav>
     <!-- Navbar End -->
 
-    <script>
-      let UserCreds = JSON.parse(sessionStorage.getItem("user-crendentials"));
-      let UserInfo = JSON.parse(sessionStorage.getItem("user-Info"));
-    </script>
+    <h1>Welcome to the Homepage</h1>
+    <div>First Name: <span id="loggedUserFName"></span></div>
+    <div>Last Name: <span id="loggedUserLName"></span></div>
+    <div>Email: <span id="loggedUserEmail"></span></div>
+
+    <script type="module" src="homePage.js"></script>
   </body>
 </html>

@@ -130,3 +130,13 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.messageDiv {
+  background-color: rgb(123, 24, 24);
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  opacity: 0;
+  animation: fadeOut 7s forwards;
+}
