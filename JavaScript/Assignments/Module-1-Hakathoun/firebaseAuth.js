@@ -22,14 +22,23 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-function showMessage(message, divId) {
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function showMessage(message, divId, callback) {
     var messageDiv = document.getElementById(divId);
     messageDiv.style.display = "block";
     messageDiv.innerHTML = message;
     messageDiv.style.opacity = 1;
     setTimeout(function () {
         messageDiv.style.opacity = 0;
-    }, 5000);
+        if (typeof callback === 'function') {
+            callback();
+        }
+    }, 3000);
 }
 
 const signUp = document.getElementById('submitSignUp');
@@ -42,36 +51,50 @@ signUp.addEventListener('click', (event) => {
 
     const auth = getAuth();
     const db = getFirestore();
+
+    const loadingDiv = document.getElementById('loading');
+    loadingDiv.style.display = 'block';
+
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             const user = userCredential.user;
             const userData = {
                 email: email,
-                password: password,
                 firstName: firstName,
-                lastName: lastName
+                lastName: lastName,
+                password: password
             };
-            showMessage('Account Created Successfully', 'signUpMessage');
             const docRef = doc(db, "users", user.uid);
             setDoc(docRef, userData)
                 .then(() => {
-                    window.location.href = 'index.html';
+                    showMessage('User Registered Successfully', 'signUpMessage', 3000, () => {
+                        closeModal('signupUserModal');
+                        document.getElementById('rEmail').value = '';
+                        document.getElementById('rPassword').value = '';
+                        document.getElementById('fName').value = '';
+                        document.getElementById('lName').value = '';
+                        loadingDiv.style.display = 'none';
+                        localStorage.removeItem('signupUserModal');
+                    });
                 })
                 .catch((error) => {
-                    console.error("error writing document", error);
-
+                    console.error("Error writing document", error);
+                    showMessage('Unable to create user', 'signUpMessage');
                 });
         })
         .catch((error) => {
             const errorCode = error.code;
             if (errorCode == 'auth/email-already-in-use') {
                 showMessage('Email Address Already Exists !!!', 'signUpMessage');
-            }
-            else {
-                showMessage('unable to create User', 'signUpMessage');
+            } else {
+                showMessage('Unable to create User', 'signUpMessage');
             }
         })
+        .finally(() => {
+            loadingDiv.style.display = 'none';
+        });
 });
+
 
 const signIn = document.getElementById('submitSignIn');
 signIn.addEventListener('click', (event) => {
