@@ -38,7 +38,6 @@
           <div class="dark-light">
             <i class="bx bx-cart cart"></i>
           </div>
-
           <div class="searchBox">
             <div class="searchToggle">
               <i class="bx bx-x cancel"></i>
@@ -53,10 +52,10 @@
           <div class="login-box dropdown">
             <img class="dropbtn" src="./Assets/login.png" alt="" />
             <div class="dropdown-content">
-              <a href="#" id="openSignup">SignUp as Admin</a>
-              <a href="#" id="loginAsAdmin">SignUp as User</a>
-              <a href="#" id="signupAsUser">Login as Admin</a>
-              <a href="#" id="userLogin">Login as User</a>
+              <a href="#" id="openSignupAdminModal">SignUp as Admin</a>
+              <a href="#" id="openSignupUserModal">SignUp as User</a>
+              <a href="#" id="openLoginAdminModal">Login as Admin</a>
+              <a href="#" id="openLoginUserModal">Login as User</a>
             </div>
           </div>
         </div>
@@ -65,25 +64,90 @@
     <!-- Navbar End -->
 
     <!-- Admin Signup Modal  -->
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Admin SignUp</h2>
-        <p>This is a modal window. Click the &times; to close.</p>
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <!-- <div id="myModal">
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Modal title
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </div> -->
     <!-- Modal End -->
     <!-- Admin Login Modal  -->
-    <div id="myModal2" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Admin Login</h2>
-        <p>This is a modal window. Click the &times; to close.</p>
+    <!-- <div id="myModal1">
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                lOgin Modal
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">okhh</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </div> -->
     <!-- Modal End -->
     <!-- User Signup Modal  -->
-    <div id="myModal3" class="modal">
+    <!-- <div id="myModal3" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>User SignUp</h2>
@@ -133,10 +197,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Modal End -->
     <!-- User Admin Modal  -->
-    <div id="myModal4" class="modal">
+    <!-- <div id="myModal4" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>User Login</h2>
@@ -180,8 +244,107 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Modal End -->
+
+    <!-- Modals -->
+    <!-- Modals -->
+    <div id="signupAdminModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Signup as Admin</h2>
+        <form>
+          <label for="adminUsername">Username:</label>
+          <input
+            type="text"
+            id="adminUsername"
+            name="adminUsername"
+            required
+          /><br /><br />
+          <label for="adminPassword">Password:</label>
+          <input
+            type="password"
+            id="adminPassword"
+            name="adminPassword"
+            required
+          /><br /><br />
+          <button type="submit">Signup</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="loginAdminModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login as Admin</h2>
+        <form>
+          <label for="adminLoginUsername">Username:</label>
+          <input
+            type="text"
+            id="adminLoginUsername"
+            name="adminLoginUsername"
+            required
+          /><br /><br />
+          <label for="adminLoginPassword">Password:</label>
+          <input
+            type="password"
+            id="adminLoginPassword"
+            name="adminLoginPassword"
+            required
+          /><br /><br />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="signupUserModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Signup as User</h2>
+        <form>
+          <label for="userUsername">Username:</label>
+          <input
+            type="text"
+            id="userUsername"
+            name="userUsername"
+            required
+          /><br /><br />
+          <label for="userPassword">Password:</label>
+          <input
+            type="password"
+            id="userPassword"
+            name="userPassword"
+            required
+          /><br /><br />
+          <button type="submit">Signup</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="loginUserModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login as User</h2>
+        <form>
+          <label for="userLoginUsername">Username:</label>
+          <input
+            type="text"
+            id="userLoginUsername"
+            name="userLoginUsername"
+            required
+          /><br /><br />
+          <label for="userLoginPassword">Password:</label>
+          <input
+            type="password"
+            id="userLoginPassword"
+            name="userLoginPassword"
+            required
+          /><br /><br />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
     <!-- Body -->
 
     <div class="main">
@@ -219,8 +382,6 @@
       <img src="./Assets/happy emoji.png" alt="" />
     </div>
     <script src="navbar.js"></script>
-    <script type="module" src="signup.js"></script>
-    <script type="module" src="login.js"></script>
     <script
       type="module"
       src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js"

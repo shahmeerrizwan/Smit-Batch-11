@@ -53,129 +53,114 @@ document.addEventListener("DOMContentLoaded", function () {
     setActiveLink();
 });
 
-
-// SIGNUP MODAL 
-
-
 document.addEventListener("DOMContentLoaded", function () {
-    var openSignup = document.getElementById("openSignup");
-    var modal = document.getElementById("myModal");
-    var closeButton = modal.getElementsByClassName("close")[0];
+    var modals = {
+        "signupAdminModal": {
+            modal: document.getElementById("signupAdminModal"),
+            isOpen: false
+        },
+        "loginAdminModal": {
+            modal: document.getElementById("loginAdminModal"),
+            isOpen: false
+        },
+        "signupUserModal": {
+            modal: document.getElementById("signupUserModal"),
+            isOpen: false
+        },
+        "loginUserModal": {
+            modal: document.getElementById("loginUserModal"),
+            isOpen: false
+        }
+    };
 
-    function showModal() {
+    var modalKeys = Object.keys(modals);
+
+    function openModal(modalId) {
+        if (modals[modalId].isOpen) {
+            return;
+        }
+
+        modalKeys.forEach(function (key) {
+            if (key !== modalId && modals[key].isOpen) {
+                closeModal(key);
+            }
+        });
+
+        var modal = modals[modalId].modal;
         modal.style.display = "block";
         document.body.style.overflow = "hidden";
-        localStorage.setItem("modalOpen", "true");
+        modals[modalId].isOpen = true;
+        localStorage.setItem(modalId, "open");
     }
 
-    function hideModal() {
+    function closeModal(modalId) {
+        if (!modals[modalId].isOpen) {
+            return;
+        }
+
+        var modal = modals[modalId].modal;
         modal.style.display = "none";
         document.body.style.overflow = "auto";
-        localStorage.removeItem("modalOpen");
+        modals[modalId].isOpen = false;
+        localStorage.removeItem(modalId);
     }
 
-    var isModalOpen = localStorage.getItem("modalOpen");
-    if (isModalOpen) {
-        showModal();
-    }
-    openSignup.onclick = function () {
-        showModal();
-    }
-    closeButton.onclick = function (event) {
-        hideModal();
-        event.stopPropagation();
-    }
+    modalKeys.forEach(function (key) {
+        var modalState = localStorage.getItem(key);
+        if (modalState === "open") {
+            openModal(key);
+        }
+    });
+
+    var openSignupAdminBtn = document.getElementById("openSignupAdminModal");
+    var openLoginAdminBtn = document.getElementById("openLoginAdminModal");
+    var openSignupUserBtn = document.getElementById("openSignupUserModal");
+    var openLoginUserBtn = document.getElementById("openLoginUserModal");
+
+    openSignupAdminBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        openModal("signupAdminModal");
+    });
+
+    openLoginAdminBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        openModal("loginAdminModal");
+    });
+
+    openSignupUserBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        openModal("signupUserModal");
+    });
+
+    openLoginUserBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        openModal("loginUserModal");
+    });
+
+    var closeButtons = document.querySelectorAll(".modal .close");
+    closeButtons.forEach(function (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+            var modalId = this.closest(".modal").id;
+            closeModal(modalId);
+        });
+    });
+
+    modalKeys.forEach(function (key) {
+        var modal = modals[key].modal;
+        modal.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                event.stopPropagation();
+            }
+        });
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            modalKeys.forEach(function (key) {
+                if (modals[key].isOpen) {
+                    closeModal(key);
+                }
+            });
+        }
+    });
 });
-
-
-// Login As Admin
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    var loginAsAdmin = document.getElementById("loginAsAdmin");
-    var modal = document.getElementById("myModal3");
-    var closeButton = modal.getElementsByClassName("close")[0];
-    function showModal() {
-        modal.style.display = "block";
-        document.body.style.overflow = "hidden";
-        localStorage.setItem("modalOpen", "true");
-    }
-    function hideModal() {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto";
-        localStorage.removeItem("modalOpen");
-    }
-    var isModalOpen = localStorage.getItem("modalOpen");
-    if (isModalOpen) {
-        showModal();
-    }
-    loginAsAdmin.onclick = function () {
-        showModal();
-    }
-    closeButton.onclick = function (event) {
-        hideModal();
-        event.stopPropagation();
-    }
-});
-
-// Singup As User
-
-document.addEventListener("DOMContentLoaded", function () {
-    var signupAsUser = document.getElementById("signupAsUser");
-    var modal = document.getElementById("myModal2");
-    var closeButton = modal.getElementsByClassName("close")[0];
-    function showModal() {
-        modal.style.display = "block";
-        document.body.style.overflow = "hidden";
-        localStorage.setItem("modalOpen", "true");
-    }
-    function hideModal() {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto";
-        localStorage.removeItem("modalOpen");
-    }
-    var isModalOpen = localStorage.getItem("modalOpen");
-    if (isModalOpen) {
-        showModal();
-    }
-    signupAsUser.onclick = function () {
-        showModal();
-    }
-    closeButton.onclick = function (event) {
-        hideModal();
-        event.stopPropagation();
-    }
-});
-
-
-
-// Singup As User
-
-document.addEventListener("DOMContentLoaded", function () {
-    var userLogin = document.getElementById("userLogin");
-    var modal = document.getElementById("myModal4");
-    var closeButton = modal.getElementsByClassName("close")[0];
-    function showModal() {
-        modal.style.display = "block";
-        document.body.style.overflow = "hidden";
-        localStorage.setItem("modalOpen", "true");
-    }
-    function hideModal() {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto";
-        localStorage.removeItem("modalOpen");
-    }
-    var isModalOpen = localStorage.getItem("modalOpen");
-    if (isModalOpen) {
-        showModal();
-    }
-    userLogin.onclick = function () {
-        showModal();
-    }
-    closeButton.onclick = function (event) {
-        hideModal();
-        event.stopPropagation();
-    }
-});
-
-
