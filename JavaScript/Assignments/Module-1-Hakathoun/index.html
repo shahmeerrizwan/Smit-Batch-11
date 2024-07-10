@@ -348,19 +348,43 @@
     <div id="myModal4">
       <div id="loginUserModal" class="modal">
         <div class="modal-content" id="signIn">
+          <div class="overlay"></div>
           <span class="close">&times;</span>
-          <h2>Login as User</h2>
+          <div class="img-s">
+            <img src="./Assets/LOGIN NOW.png" alt="" />
+          </div>
+          <p>Login Now As User</p>
           <form>
             <div
               id="signInMessage"
               class="messageDiv"
               style="display: none"
             ></div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" required /><br /><br />
-            <label for="password">Password:</label>
-            <input type="password" id="password" required /><br /><br />
-            <button class="btn" id="submitSignIn">Log In</button>
+            <label for="email">Email :</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter Your Email"
+              required
+            /><br /><br />
+            <label for="password">Password :</label>
+            <input
+              type="password"
+              placeholder="Enter Your Password"
+              id="password"
+              required
+            /><br /><br />
+            <h5>
+              Before proceeding, please take a moment to review our terms and
+              policies. These guidelines outline the rules and expectations for
+              using our platform, ensuring a safe and respectful environment for
+              all users. Our privacy policy details how we collect, use, and
+              protect your personal information, prioritizing your security and
+              confidentiality.
+            </h5>
+            <div class="btn">
+              <button class="btn" id="submitSignIn">Log In</button>
+            </div>
           </form>
         </div>
       </div>

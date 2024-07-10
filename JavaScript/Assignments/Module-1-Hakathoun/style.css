@@ -142,12 +142,7 @@
 }
 
 /* MODAL CSS */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow: auto; /* Allow scrollbar initially */
-}
+
 body.modal-active {
   overflow: hidden;
 }
@@ -219,14 +214,73 @@ body.modal-active {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  height: 340px;
   max-width: 400px;
   border-radius: 5px;
 }
-
 .modal-content h2 {
-  margin-top: 0;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+  color: #202021;
+  font-weight: 900;
 }
-
+.img-s {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-s img {
+  width: 60%;
+}
+.modal-content p {
+  text-align: center;
+  position: relative;
+  bottom: 3px;
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: underline;
+  font-weight: 900;
+  color: #ae2121;
+}
+.modal-content form label {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  font-family: ui-monospace;
+  color: #9c2929;
+}
+.modal-content form input {
+  width: 60%;
+  border: none;
+  padding: 10px;
+}
+.modal-content form {
+  position: relative;
+  top: 30px;
+}
+.modal-content h5 {
+  font-size: 7px;
+  color: grey;
+  text-align: center;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn button {
+  width: 120px;
+  height: 25px;
+  font-size: 12px;
+  font-weight: 900;
+  background-color: #f7b41a;
+  border: none;
+  color: #9c2929;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
 .close {
   color: #aaa;
   float: right;

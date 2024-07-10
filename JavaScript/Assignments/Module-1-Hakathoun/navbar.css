@@ -40,7 +40,6 @@ nav {
   height: 70px;
   width: 100%;
   background-color: transparent;
-  z-index: 100;
 }
 
 nav .nav-bar {
@@ -117,6 +116,18 @@ nav .nav-bar .logo a {
   background-color: #ffffff;
   opacity: 1;
   transition: all 0.8s ease !important;
+}
+.overlay {
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: 1s;
+  width: 100vw;
+  z-index: 10000;
+  background-color: #313131cc;
 }
 
 .nav-bar .darkLight-searchBox {
@@ -304,6 +315,7 @@ body.dark .search-field i {
     padding: 20px;
     background-color: var(--side-nav);
     z-index: 100;
+
     transition: all 0.6s ease;
   }
 
