@@ -68,11 +68,11 @@ signUp.addEventListener('click', (event) => {
             setDoc(docRef, userData)
                 .then(() => {
                     showMessage('User Registered Successfully', 'signUpMessage', 3000, () => {
-                        closeModal('signupUserModal');
                         document.getElementById('rEmail').value = '';
                         document.getElementById('rPassword').value = '';
                         document.getElementById('fName').value = '';
                         document.getElementById('lName').value = '';
+                        closeModal('signupUserModal');
                         loadingDiv.style.display = 'none';
                         localStorage.removeItem('signupUserModal');
                     });
@@ -102,10 +102,11 @@ signIn.addEventListener('click', (event) => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const auth = getAuth();
-
+    const loadingDiv = document.getElementById('loading');
+    loadingDiv.style.display = 'block'; // Show loading indicator initially
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            showMessage('login is successful', 'signInMessage');
+            showMessage('login is successfull', 'signInMessage');
             const user = userCredential.user;
             localStorage.setItem('loggedInUserId', user.uid);
             window.location.href = 'home.html';
@@ -119,4 +120,8 @@ signIn.addEventListener('click', (event) => {
                 showMessage('Account does not Exist', 'signInMessage');
             }
         })
+        .finally(() => {
+            // Always hide the loading indicator after login attempt (whether success or failure)` 
+            loadingDiv.style.display = 'none';
+        });
 })

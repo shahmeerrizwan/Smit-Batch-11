@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 import { getFirestore, getDoc, doc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
@@ -57,3 +67,30 @@ logoutButton.addEventListener('click', () => {
             console.error('Error Signing out:', error);
         })
 })
+
+// Navbar Code
+
+const body = document.querySelector("body"),
+    nav = document.querySelector("nav"),
+    searchToggle = document.querySelector(".searchToggle"),
+    sidebarOpen = document.querySelector(".sidebarOpen"),
+    siderbarClose = document.querySelector(".siderbarClose");
+
+
+searchToggle.addEventListener("click", () => {
+    searchToggle.classList.toggle("active");
+});
+sidebarOpen.addEventListener("click", () => {
+    nav.classList.add("active");
+});
+
+body.addEventListener("click", (e) => {
+    let clickedElm = e.target;
+
+    if (
+        !clickedElm.classList.contains("sidebarOpen") &&
+        !clickedElm.classList.contains("menu")
+    ) {
+        nav.classList.remove("active");
+    }
+});
