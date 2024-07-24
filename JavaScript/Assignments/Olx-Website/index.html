@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="modal.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -79,7 +80,7 @@
               </div>
             </div>
             <div class="language">
-              <span>Login</span>
+              <span onclick="openLogin()">Login</span>
             </div>
             <div class="sellMenu">
               <SellButton />
@@ -94,6 +95,42 @@
     </div>
 
     <!-- NAVBAR CODE COMPLETED -->
+
+    <!-- LOGIN MODAL CODE  -->
+
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <div class="login" id="login">
+      <div class="login_form">
+        <i class="fa-solid fa-xmark close__btn" onclick="closeLogin()"></i>
+        <img
+          class="modal-logo"
+          src="https://1000logos.net/wp-content/uploads/2023/01/OLX-logo.png"
+          alt="OLX Logo"
+        />
+        <h1>WELCOME TO OLX</h1>
+        <button class="loginSign_button">
+          <img src="./Assets/facebok.svg" alt="Facebook Logo" /> Continue with
+          Facebook
+        </button>
+        <button class="loginSign_button" onclick="createAccountPage()">
+          <img src="./Assets/googleIcon.svg" alt="Google Icon" /> Create Your
+          Account
+        </button>
+        <button class="loginSign_button" onclick="emailLogin()">
+          <img src="./Assets/email.svg" alt="Email Icon" /> Continue With Email
+        </button>
+        <button class="loginSign_button" onclick="phoneLogin()">
+          <img src="./Assets/phone.svg" alt="Phone Icon" /> Continue with Phone
+        </button>
+        <p>
+          By continuing, you are accepting <b>OLX Terms</b> of use and
+          <b>Privacy Policy</b>
+        </p>
+      </div>
+    </div>
+
+    <!-- LOGIN MODAL CODE END  -->
 
     <!-- CAROUSEL CODE -->
 
@@ -312,6 +349,7 @@
       </div>
     </footer>
     <!-- FOOTER CODE END  -->
+    <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
