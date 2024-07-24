@@ -67,3 +67,14 @@ function checkModalState() {
 }
 
 document.addEventListener("DOMContentLoaded", checkModalState);
+
+
+
+function errorMessage() {
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong! Use Another Method",
+        footer: '<a href="#">Why do I have this issue?</a>'
+    });
+}

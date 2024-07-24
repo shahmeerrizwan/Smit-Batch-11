@@ -109,7 +109,7 @@
           alt="OLX Logo"
         />
         <h1>WELCOME TO OLX</h1>
-        <button class="loginSign_button">
+        <button class="loginSign_button" onclick="errorMessage()">
           <img src="./Assets/facebok.svg" alt="Facebook Logo" /> Continue with
           Facebook
         </button>
@@ -120,7 +120,7 @@
         <button class="loginSign_button" onclick="emailLogin()">
           <img src="./Assets/email.svg" alt="Email Icon" /> Continue With Email
         </button>
-        <button class="loginSign_button" onclick="phoneLogin()">
+        <button class="loginSign_button" onclick="errorMessage()">
           <img src="./Assets/phone.svg" alt="Phone Icon" /> Continue with Phone
         </button>
         <p>
@@ -403,6 +403,7 @@
     <!-- FOOTER CODE END  -->
     <script src="app.js"></script>
     <script src="modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
