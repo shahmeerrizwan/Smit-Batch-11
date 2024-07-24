@@ -41,7 +41,7 @@
 
 /* <!-- CATEGORY CSS CODE END --> */
 
-/* <!-- IMAGE CODE CSS [ADD 2] --> */
+/* <!-- IMAGE CODE CSS [ADD 3] --> */
 
 .add-third {
   display: flex;
@@ -50,6 +50,16 @@
 }
 .add-third img {
   width: 80%;
+  height: 40vh;
 }
 
-/* <!-- IMAGE CODE CSS [ADD 2] END --> */
+/* <!-- IMAGE CODE CSS [ADD 3] END --> */
+
+/* <!-- IMAGE CODE CSS [ADD 4] --> */
+
+.add-fourth img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* <!-- IMAGE CODE CSS [ADD 4] END --> */
