@@ -40,3 +40,16 @@
 }
 
 /* <!-- CATEGORY CSS CODE END --> */
+
+/* <!-- IMAGE CODE CSS [ADD 2] --> */
+
+.add-third {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-third img {
+  width: 80%;
+}
+
+/* <!-- IMAGE CODE CSS [ADD 2] END --> */
