@@ -14,7 +14,9 @@ body.no-scroll {
   cursor: not-allowed;
 }
 
-.login {
+.login,
+.signUp,
+.login_email {
   display: none;
   background-color: rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -26,7 +28,9 @@ body.no-scroll {
   z-index: 999999;
 }
 
-.login_form {
+.login_form,
+.signUp_account,
+.email_login {
   background-color: #ffffff;
   width: 400px;
   height: auto;
@@ -89,4 +93,57 @@ body.no-scroll {
 
 .modal-logo {
   width: 20%;
+}
+.signUp h3 {
+  margin: 15px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.signUp p {
+  font-size: 12px;
+  margin: 20px;
+  text-align: center;
+  width: 250px;
+}
+
+.signUp button {
+  background-color: #012f34;
+  padding: 10px 30px;
+  width: 80%;
+  color: #fff;
+  border: 1px solid #012f34;
+  font-size: 17px;
+  border-radius: 5px;
+  margin-top: 22px;
+  cursor: pointer;
+}
+
+.signUp input {
+  width: 80%;
+  background-color: #fff;
+  border: 1px solid #012f34;
+  border-radius: 5px;
+  color: #012f34;
+  padding: 10px 30px;
+  margin: 8px;
+  font-size: 17px;
+}
+.icons_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+}
+
+.icons_flex i {
+  font-size: 30px;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.icons_flex i:first-child {
+  margin-top: -20px;
 }

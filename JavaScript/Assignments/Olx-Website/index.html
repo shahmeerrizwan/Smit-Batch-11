@@ -131,6 +131,52 @@
     </div>
 
     <!-- LOGIN MODAL CODE END  -->
+    <!-- SIGNUP MODAL CODE START  -->
+
+    <div class="signUp hidden" id="signUp">
+      <div class="signUp_account">
+        <div class="icons_flex">
+          <i class="fa-solid fa-arrow-left" onclick="backToLogin()"></i>
+          <i class="fa-solid fa-xmark close__btn" onclick="closeSignUp()"></i>
+        </div>
+        <img src="./images/email__login.svg" alt="" />
+        <h2>Create Your Account</h2>
+        <input type="text" id="name" placeholder="Name" />
+        <input type="text" id="signEmail" placeholder="Email" />
+        <input type="text" id="signphone" placeholder="Phone Number" />
+        <input type="text" id="gender" placeholder="Gender" />
+        <button class="next_button" id="button" onclick="signUp()">
+          Create an Account
+        </button>
+        <p>
+          We won't reveal your phone number to anyone else nor use it to send
+          you spam.
+        </p>
+      </div>
+    </div>
+
+    <!-- SIGNUP MODAL CODE END  -->
+
+    <!-- SIGNUP WITH EMAIL MODAL START -->
+
+    <div class="login_email hidden" id="email">
+      <div class="email_login">
+        <div class="icons_flex">
+          <i class="fa-solid fa-arrow-left" onclick="backEmail()"></i>
+          <i class="fa-solid fa-xmark close__btn" onclick="closeEmail()"></i>
+        </div>
+        <img src="./images/emal__login.svg" alt="" />
+        <h2>Enter Your Email</h2>
+        <input type="email" id="emailLogin" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button class="next_button" onclick="login()">Login</button>
+        <p>
+          We won't reveal your email to anyone else nor use it to send you spam.
+        </p>
+      </div>
+    </div>
+
+    <!-- SIGNUP WITH EMAIL MODAL END -->
 
     <!-- CAROUSEL CODE -->
 
