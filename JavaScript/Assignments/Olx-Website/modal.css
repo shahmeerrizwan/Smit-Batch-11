@@ -147,3 +147,45 @@ body.no-scroll {
 .icons_flex i:first-child {
   margin-top: -20px;
 }
+.email_login h3 {
+  margin: 15px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.email_login input {
+  width: 80%;
+  background-color: #fff;
+  border: 1px solid #012f34;
+  border-radius: 5px;
+  color: #012f34;
+  padding: 10px 30px;
+  margin: 20px;
+  font-size: 17px;
+}
+
+.email_login button {
+  background-color: #012f34;
+  padding: 10px 30px;
+  width: 80%;
+  color: #fff;
+  border: 1px solid #012f34;
+  font-size: 17px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.email_login p {
+  font-size: 12px;
+  margin: 20px;
+  text-align: center;
+  width: 250px;
+}
+.email_login img {
+  margin-bottom: 10px;
+  width: 15%;
+}
+.signUp_account img {
+  width: 15%;
+  margin-bottom: 5px;
+}
