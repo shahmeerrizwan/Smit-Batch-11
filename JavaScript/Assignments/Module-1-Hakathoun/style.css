@@ -216,7 +216,7 @@ body.modal-active {
   width: 80%;
   height: 340px;
   max-width: 400px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .modal-content h2 {
   text-align: center;

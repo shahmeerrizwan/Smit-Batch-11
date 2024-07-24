@@ -1,0 +1,42 @@
+/* <!-- IMAGE CODE CSS [ADD 1] --> */
+
+.sec-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec-img img {
+  width: 60%;
+}
+
+/* <!-- IMAGE CODE CSS [ADD 1] END --> */
+
+/* <!-- CATEGORY CSS CODE START --> */
+
+.category {
+  font-family: serif;
+  font-weight: bolder;
+}
+.category-title {
+  text-align: center;
+  font-family: serif;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+.category-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.category-item img {
+  width: 60%;
+}
+.category-item p {
+  margin-top: 10px;
+}
+
+/* <!-- CATEGORY CSS CODE END --> */
