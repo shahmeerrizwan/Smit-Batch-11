@@ -84,7 +84,7 @@
             </div>
             <div class="sellMenu">
               <SellButton />
-              <div class="sellMenuContent">
+              <div onclick="openLogin()" class="sellMenuContent">
                 <img src="./Assets/shade.svg" alt="" />
                 <span>SELL</span>
               </div>
@@ -145,12 +145,10 @@
         />
         <h2>Create Your Account</h2>
         <input type="text" id="name" placeholder="Name" />
-        <input type="text" id="signEmail" placeholder="Email" />
-        <input type="text" id="signphone" placeholder="Phone Number" />
-        <input type="text" id="gender" placeholder="Gender" />
-        <button class="next_button" id="button" onclick="signUp()">
-          Create an Account
-        </button>
+        <input type="email" id="signEmail" placeholder="Email" />
+        <input type="password" id="signPassword" placeholder="Password" />
+        <input type="number" id="age" placeholder="Age" />
+        <button class="next_button" id="signUpButton">Create an Account</button>
         <p>
           We won't reveal your phone number to anyone else nor use it to send
           you spam.
@@ -174,8 +172,8 @@
         />
         <h2>Enter Your Email</h2>
         <input type="email" id="emailLogin" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <button class="next_button" onclick="login()">Login</button>
+        <input type="password" id="passLogin" placeholder="Password" />
+        <button class="next_button" id="LoginButton">Login</button>
         <p>
           We won't reveal your email to anyone else nor use it to send you spam.
         </p>
@@ -401,7 +399,7 @@
       </div>
     </footer>
     <!-- FOOTER CODE END  -->
-    <script src="app.js"></script>
+    <script type="module" src="firebase.js"></script>
     <script src="modal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
