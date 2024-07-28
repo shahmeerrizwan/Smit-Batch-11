@@ -35,6 +35,7 @@ onAuthStateChanged(auth, async (user) => {
         }
 
         document.getElementById("userEmail").innerText = "👋 " + user.email || 'N/A';
+
     } else {
         console.log("No user is currently signed in.");
     }

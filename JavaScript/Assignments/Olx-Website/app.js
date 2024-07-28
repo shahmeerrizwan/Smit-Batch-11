@@ -8,3 +8,11 @@ function closeProfile() {
     document.body.classList.remove("no-scroll");
 }
 
+function goToSell() {
+    window.location.href = 'sell.html'
+}
+
+function goToDashboard() {
+    window.location.href = 'dashboard.html'
+}
+

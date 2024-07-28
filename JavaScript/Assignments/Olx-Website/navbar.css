@@ -10,6 +10,14 @@ body {
   width: 100%;
   background-color: whitesmoke;
 }
+.back-1 {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  background-color: whitesmoke;
+}
 .main {
   align-items: center;
   justify-content: flex-start;
@@ -25,6 +33,13 @@ body {
 .olxlogo img {
   width: 70px;
   cursor: pointer;
+}
+.olxlogo-1 img {
+  width: 60px;
+  position: relative;
+  bottom: 4px;
+  cursor: pointer;
+  right: 90px;
 }
 .carlogo span {
   margin-left: 10px;
@@ -99,7 +114,7 @@ body {
 }
 
 .productSearch {
-  width: 42em;
+  width: 38em;
   height: 48px;
   border: 2px solid #002f34;
   border-radius: 4px;
@@ -236,4 +251,11 @@ body {
   color: rgb(0, 0, 0) !important;
   margin: 0 !important;
   font-size: 22px;
+}
+.left-arrow {
+  position: relative;
+  right: 60px;
+}
+.left-arrow i {
+  font-size: 25px;
 }
