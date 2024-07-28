@@ -17,7 +17,10 @@ body {
   gap: 57px;
   padding-top: 12px;
   margin-left: 90px;
-  margin-top: 10px;
+  position: relative;
+  margin-top: 20px;
+  bottom: 18px;
+  margin-bottom: 20px;
 }
 .olxlogo img {
   width: 70px;

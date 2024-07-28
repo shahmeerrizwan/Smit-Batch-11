@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
 // Your web app's Firebase configuration
@@ -20,6 +20,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
+// SIGNUP FUNCTION 
 // SIGNUP FUNCTION 
 const register = async () => {
     let email = document.getElementById("signEmail").value;
@@ -45,11 +46,21 @@ const register = async () => {
             Email: email,
             Age: age
         });
-        Swal.fire({
+        document.getElementById("signEmail").value = ''
+        document.getElementById("signPassword").value = ''
+        document.getElementById("name").value = ''
+        document.getElementById("age").value = ''
+        await Swal.fire({
             title: "Success!",
             text: "User Registered Successfully",
             icon: "success",
         });
+        await Swal.fire({
+            text: "Go & Login With Email",
+            icon: "success",
+        });
+        localStorage.clear();
+        window.location.href = 'index.html'
 
     } catch (error) {
         const errorCode = error.code;
@@ -121,13 +132,16 @@ const signIn = async () => {
         });
 
         await signInWithEmailAndPassword(auth, email, password);
-        Swal.fire({
+        localStorage.clear();
+        await Swal.fire({
             title: "Success!",
             text: "User Signed In Successfully",
             icon: "success",
+
         });
+        localStorage.clear();
+        window.location.href = 'dashboard.html'
     } catch (error) {
-        // Debugging output
         console.log('Error object:', error);
 
         let errorMessage = "";
@@ -158,7 +172,6 @@ const signIn = async () => {
                 errorMessage = "Email is not Register.";
                 break;
             default:
-                // Print the error code if it's not handled by the switch
                 console.log('Unhandled error code:', error.code);
                 errorMessage = "An unknown error occurred.";
                 break;
@@ -174,3 +187,8 @@ const signIn = async () => {
 }
 
 document.getElementById("LoginButton").addEventListener("click", signIn);
+
+
+
+
+

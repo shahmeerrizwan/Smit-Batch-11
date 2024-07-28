@@ -85,7 +85,7 @@ body.no-scroll {
 
 .close__btn {
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 20px;
   cursor: pointer;
   font-size: 30px;
@@ -183,7 +183,13 @@ body.no-scroll {
 }
 .email_login img {
   margin-bottom: 10px;
-  width: 15%;
+  width: 20%;
+}
+.pro-img {
+  margin-bottom: 10px;
+  width: 35% !important;
+  position: relative;
+  bottom: 102px;
 }
 .signUp_account img {
   width: 15%;
@@ -192,4 +198,42 @@ body.no-scroll {
 .swal2-popup {
   position: relative;
   z-index: 99999999 !important;
+}
+.dark {
+  background-color: #012f34;
+  width: 400px;
+  height: 140px;
+  position: relative;
+  bottom: 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.white {
+  color: white;
+}
+.email_login h1 {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
+  bottom: 80px;
+}
+.up {
+  position: relative;
+  bottom: 40px;
+}
+.p-p {
+  font-size: 12px;
+  margin: 20px;
+  text-align: center;
+  position: relative;
+  width: 250px;
+  bottom: 32px;
+}
+.avatar {
+  width: 4%;
+  cursor: pointer;
+}
+.swal2-cancel {
+  margin: 20px !important;
 }
