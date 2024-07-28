@@ -258,4 +258,5 @@ body {
 }
 .left-arrow i {
   font-size: 25px;
+  cursor: pointer;
 }

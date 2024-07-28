@@ -30,6 +30,7 @@ body {
 }
 .fa-arrow-right {
   font-size: 20px;
+  cursor: pointer;
 }
 .add-1-img h3 {
   font-size: 20px;

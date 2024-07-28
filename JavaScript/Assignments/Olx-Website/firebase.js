@@ -21,7 +21,6 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 // SIGNUP FUNCTION 
-// SIGNUP FUNCTION 
 const register = async () => {
     let email = document.getElementById("signEmail").value;
     let password = document.getElementById("signPassword").value;
