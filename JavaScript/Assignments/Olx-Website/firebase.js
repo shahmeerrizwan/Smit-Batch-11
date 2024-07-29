@@ -27,6 +27,16 @@ const register = async () => {
     let fullName = document.getElementById("name").value;
     let age = document.getElementById("age").value;
 
+    if (!email || !password || !fullName || !age) {
+        Swal.fire({
+            icon: "error",
+            title: "Incomplete Information",
+            text: "Please fill in all fields.",
+        });
+        return;
+    }
+
+
     try {
         Swal.fire({
             title: "Processing...",
@@ -111,6 +121,17 @@ document.getElementById("signUpButton").addEventListener("click", register);
 const signIn = async () => {
     let email = document.getElementById("emailLogin").value;
     let password = document.getElementById("passLogin").value;
+
+    if (!email || !password) {
+        Swal.fire({
+            icon: "error",
+            title: "Incomplete Information",
+            text: "Please fill in all fields.",
+        });
+        return;
+    }
+
+
     if (password.length < 6) {
         Swal.fire({
             icon: "error",
@@ -168,7 +189,7 @@ const signIn = async () => {
                 errorMessage = "Email/password login is not enabled.";
                 break;
             case 'auth/invalid-credential':
-                errorMessage = "Email is not Register.";
+                errorMessage = "Email/password is not Register.";
                 break;
             default:
                 console.log('Unhandled error code:', error.code);
