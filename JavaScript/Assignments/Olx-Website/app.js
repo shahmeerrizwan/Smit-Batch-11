@@ -8,7 +8,9 @@ function closeProfile() {
     document.body.classList.remove("no-scroll");
 }
 
-
+function goToCategory() {
+    window.location.href = "category.html";
+}
 
 
 function toggleDropdown() {
