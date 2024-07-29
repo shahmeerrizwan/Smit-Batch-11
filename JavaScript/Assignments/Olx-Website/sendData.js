@@ -51,9 +51,6 @@ onAuthStateChanged(auth, async (user) => {
 
 
 
-
-
-
 async function addDataToFireStore() {
     let title = document.getElementById('title').value;
     let description = document.getElementById('description').value;
@@ -64,7 +61,11 @@ async function addDataToFireStore() {
     let brand = document.getElementById('brand').value;
     let imageFile = document.getElementById('image').files[0];
 
-    if (!title || !price || !description || !imageFile || !brand || !condition || !phoneNumber || !location) {
+    // Get the category from localStorage
+    let categoryData = JSON.parse(localStorage.getItem('selectedCategory'));
+    let category = categoryData ? categoryData.name : '';
+
+    if (!title || !price || !description || !imageFile || !brand || !condition || !phoneNumber || !location || !category) {
         Swal.fire("Validation Error", "All fields are required.", "warning");
         return;
     }
@@ -96,6 +97,7 @@ async function addDataToFireStore() {
             PhoneNumber: phoneNumber,
             Location: location,
             Brand: brand,
+            Category: category,
             Image: imageUrl
         });
 
@@ -117,6 +119,7 @@ async function addDataToFireStore() {
         document.getElementById('brand').value = '';
         document.getElementById('image').value = '';
         document.getElementById('yes').value = '';
+
 
 
 
