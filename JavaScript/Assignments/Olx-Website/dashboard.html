@@ -79,12 +79,55 @@
                 <i class="fas fa-search"></i>
               </div>
             </div>
-            <img
-              onclick="profile()"
-              class="avatar"
-              src="./Assets/avatar.png"
-              alt=""
-            />
+            <div class="user-menu-container">
+              <div class="user-icon" onclick="toggleDropdown()">
+                <img src="./Assets/avatar.png" class="avatar" alt="User Icon" />
+              </div>
+              <div id="user-dropdown" class="dropdown-content">
+                <div class="drop-left">
+                  <img src="./Assets/avatar.png" alt="" />
+                </div>
+
+                <p>Hello, <strong id="userEmail"></strong></p>
+                <button onclick="viewProfile()">
+                  View and edit your profile
+                </button>
+                <div class="items">
+                  <hr />
+
+                  <a href="#"><img src="./Assets/myadd.svg" alt="" /> My ads</a>
+                  <a href="#"
+                    ><img src="./Assets/saved.svg" alt="" />Favourites & Saved
+                    searches</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid cent fa-eye"></i>Public Profile</a
+                  >
+                  <a href="#"
+                    ><img src="./Assets/discount.svg" alt="" />Buy Discounted
+                    Packages</a
+                  >
+                  <a href="#"
+                    ><img src="./Assets/package.svg" alt="" />Bought Packages &
+                    Billing</a
+                  >
+
+                  <hr />
+                  <a href="#"><img src="./Assets/help.svg" alt="" />Help</a>
+                  <a href="#"
+                    ><img src="./Assets/setting.svg" alt="" />Settings</a
+                  >
+                  <hr />
+                  <a id="logoutButton" href="#"
+                    ><img
+                      src="./Assets/logout.svg"
+                      id="logoutButton"
+                      alt=""
+                    />Log Out</a
+                  >
+                </div>
+              </div>
+            </div>
             <div class="sellMenu" onclick="goToSell()">
               <div class="sellMenuContent">
                 <img src="./Assets/shade.svg" alt="" />
@@ -101,7 +144,7 @@
     <!-- USER PROFILE DETAILED MODAL -->
     <!-- Modal -->
 
-    <div id="modal-overlayy" style="display: none"></div>
+    <!-- <div id="modal-overlayy" style="display: none"></div>
     <div class="login_email hidden" style="display: none" id="profile">
       <div class="email_login">
         <div class="dark"></div>
@@ -111,15 +154,15 @@
             onclick="closeProfile()"
           ></i>
         </div>
-        <img class="pro-img" src="./Assets/avatar.png" alt="" />
-        <h1><span id="userEmail"> </span></h1>
+        <img class="pro-img" src="./Assets/avatar.png" alt="" /> -->
+    <!-- <h1><span id="userEmail"> </span></h1> -->
 
-        <button class="next_button up" id="logoutButton">Log Out</button>
+    <!-- <button class="next_button up" id="logoutButton">Log Out</button>
         <p class="p-p">
           We won't reveal your email to anyone else nor use it to send you spam.
         </p>
       </div>
-    </div>
+    </div> -->
 
     <!-- CAROUSEL CODE -->
 
