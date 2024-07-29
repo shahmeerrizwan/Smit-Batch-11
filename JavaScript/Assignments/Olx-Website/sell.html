@@ -22,7 +22,7 @@
     <!-- NAVBAR CODE START -->
 
     <div class="back-1">
-      <div class="main" onclick="goToSell()">
+      <div class="main" onclick="goToCategory()">
         <div class="left-arrow">
           <i class="fa-solid fa-arrow-left"></i>
         </div>
@@ -62,11 +62,8 @@
           ></textarea>
           <label for="brand">Brand</label>
           <input id="brand" placeholder="Add Brand" type="text" />
-          <div class="condition">
-            <label for="condition">Condition : </label>
-            <button>New</button>
-            <button>Used</button>
-          </div>
+          <label for="brand">Condition</label>
+          <input placeholder="New ? Old" type="text" />
           <hr />
           <h4>SET A PRICE</h4>
           <label for="price">Price</label>
@@ -85,7 +82,7 @@
             <img src="./Assets/avatar.png" alt="" width="70px" />
             <div class="input">
               <label for="">Email</label>
-              <input type="text" id="ptofileName" />
+              <p type="text" id="userEmail1"></p>
             </div>
           </div>
           <h4>Lets verify your Account</h4>
@@ -151,7 +148,12 @@
           console.error("Error parsing category data", error);
         }
       });
+
+      function goToCategory() {
+        window.location.href = "category.html";
+      }
     </script>
+    <script type="module" src="sendData.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
