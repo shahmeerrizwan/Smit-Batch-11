@@ -37,25 +37,31 @@
     <!-- NAVBAR CODE END -->
 
     <!-- SELL FIELDS -->
-    <h1>POST YOUR AD</h1>
+    <h1 class="post">POST YOUR ADD</h1>
     <div class="cont">
       <div class="sell_container">
         <div class="sell__inputs">
-          <h4>INCLUDE SOME DETAILS</h4>
           <div class="detailed">
             <div class="named">Category</div>
             <div class="category-name">
               <img id="categoryImage" src="" alt="" />
               <h2 id="categoryName"></h2>
-              <p></p>
+            </div>
+            <div class="goBack">
+              <a href="./category.html">Change</a>
             </div>
           </div>
           <label for="name">Add Title</label>
-          <input id="name" type="text" />
+          <input id="name" placeholder="Add Title" type="text" />
           <label for="description">Description</label>
-          <textarea id="description" cols="30" rows="10"></textarea>
+          <textarea
+            id="description"
+            placeholder="Add a Description"
+            cols="30"
+            rows="10"
+          ></textarea>
           <label for="brand">Brand</label>
-          <input id="brand" type="text" />
+          <input id="brand" placeholder="Add Brand" type="text" />
           <div class="condition">
             <label for="condition">Condition : </label>
             <button>New</button>
@@ -64,37 +70,50 @@
           <hr />
           <h4>SET A PRICE</h4>
           <label for="price">Price</label>
-          <input id="price" type="text" />
+          <input id="price" placeholder="Price" type="text" />
           <hr />
           <h4>Past Image Link</h4>
           <label for="image">Link</label>
-          <input type="text" id="image" />
+          <input type="file" id="image" />
           <hr />
           <h4>Your AD'S Location</h4>
-          <label for="location">location</label>
-          <input type="text" id="location" />
+          <label for="location">Location</label>
+          <input type="text" placeholder="Add Location" id="location" />
           <hr />
           <h4>Review Your Account</h4>
           <div class="profileName">
             <img src="./Assets/avatar.png" alt="" width="70px" />
             <div class="input">
-              <label for="ptofileName">Name</label>
+              <label for="">Email</label>
               <input type="text" id="ptofileName" />
             </div>
           </div>
           <h4>Lets verify your Account</h4>
           <label for="ptofilePhone">Mobile Phone Number</label>
-          <input type="text" id="ptofilePhone" />
+          <input type="text" placeholder="Phone Number" id="ptofilePhone" />
           <h4>Want to Show Phone Number Write Yes or No</h4>
           <label for="phoneYes">Yes Or No</label>
-          <input type="text" id="phoneYes" />
+          <input type="text" placeholder="Yes or No " id="phoneYes" />
 
           <hr />
         </div>
 
         <button id="btnSubmit" onclick="addProduct()">Post Now</button>
       </div>
-      <div class="help-container"></div>
+      <div class="help-container">
+        <div class="txt">
+          <h2>Need help getting started?</h2>
+          <p>
+            Review these resource to learn how to create a great ad and increase
+            your selling chances
+          </p>
+          <ul>
+            <li>Tips for improving your ads and your chances of selling</li>
+            <li>All you need to know about Posting Ads</li>
+          </ul>
+          <p>You can always come back to change your ad</p>
+        </div>
+      </div>
     </div>
     <!-- SELL FIELDS END -->
 
