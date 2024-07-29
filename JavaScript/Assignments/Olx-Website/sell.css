@@ -58,3 +58,9 @@ body {
   font-weight: 700;
   margin: 20px;
 }
+.detailed {
+  display: flex;
+  border: 1px solid gray;
+  justify-content: flex-start;
+  align-items: center;
+}

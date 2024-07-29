@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <link rel="stylesheet" href="sell.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <title>MSR OLX</title>
+  </head>
+  <body>
+    <!-- NAVBAR CODE START -->
+
+    <div class="back-1">
+      <div class="main" onclick="goToSell()">
+        <div class="left-arrow">
+          <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="olxlogo-1">
+          <img
+            src="https://1000logos.net/wp-content/uploads/2023/01/OLX-logo.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <!-- NAVBAR CODE END -->
+
+    <!-- SELL FIELDS -->
+    <h1>POST YOUR AD</h1>
+    <div class="cont">
+      <div class="sell_container">
+        <div class="sell__inputs">
+          <h4>INCLUDE SOME DETAILS</h4>
+          <div class="detailed">
+            <div class="named">Category</div>
+            <div class="category-name">
+              <img id="categoryImage" src="" alt="" />
+              <h2 id="categoryName"></h2>
+              <p></p>
+            </div>
+          </div>
+          <label for="name">Add Title</label>
+          <input id="name" type="text" />
+          <label for="description">Description</label>
+          <textarea id="description" cols="30" rows="10"></textarea>
+          <label for="brand">Brand</label>
+          <input id="brand" type="text" />
+          <div class="condition">
+            <label for="condition">Condition : </label>
+            <button>New</button>
+            <button>Used</button>
+          </div>
+          <hr />
+          <h4>SET A PRICE</h4>
+          <label for="price">Price</label>
+          <input id="price" type="text" />
+          <hr />
+          <h4>Past Image Link</h4>
+          <label for="image">Link</label>
+          <input type="text" id="image" />
+          <hr />
+          <h4>Your AD'S Location</h4>
+          <label for="location">location</label>
+          <input type="text" id="location" />
+          <hr />
+          <h4>Review Your Account</h4>
+          <div class="profileName">
+            <img src="./Assets/avatar.png" alt="" width="70px" />
+            <div class="input">
+              <label for="ptofileName">Name</label>
+              <input type="text" id="ptofileName" />
+            </div>
+          </div>
+          <h4>Lets verify your Account</h4>
+          <label for="ptofilePhone">Mobile Phone Number</label>
+          <input type="text" id="ptofilePhone" />
+          <h4>Want to Show Phone Number Write Yes or No</h4>
+          <label for="phoneYes">Yes Or No</label>
+          <input type="text" id="phoneYes" />
+
+          <hr />
+        </div>
+
+        <button id="btnSubmit" onclick="addProduct()">Post Now</button>
+      </div>
+      <div class="help-container"></div>
+    </div>
+    <!-- SELL FIELDS END -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const categorySelected =
+          sessionStorage.getItem("categorySelected") === "true";
+
+        sessionStorage.removeItem("categorySelected");
+
+        try {
+          const categoryData = JSON.parse(
+            localStorage.getItem("selectedCategory")
+          );
+
+          if (categoryData) {
+            const categoryNameElement = document.getElementById("categoryName");
+            const categoryImageElement =
+              document.getElementById("categoryImage");
+
+            if (categoryNameElement) {
+              categoryNameElement.textContent =
+                categoryData.name || "Default Name";
+            }
+
+            if (categoryImageElement) {
+              categoryImageElement.src =
+                categoryData.image || "default-image.png";
+            }
+          } else {
+            console.error("No category data found");
+          }
+        } catch (error) {
+          console.error("Error parsing category data", error);
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

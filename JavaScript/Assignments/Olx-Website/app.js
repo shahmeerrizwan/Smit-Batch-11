@@ -12,11 +12,7 @@ function goToCategory() {
     window.location.href = 'category.html'
 }
 
-function goToDashboard() {
-    window.location.href = 'dashboard.html'
-}
 
-///
 
 function toggleDropdown() {
     var dropdown = document.getElementById("user-dropdown");
@@ -33,6 +29,9 @@ window.onclick = function (event) {
 }
 
 function viewProfile() {
-    // Handle profile viewing logic here
     alert("Redirecting to profile page...");
 }
+
+
+
+
