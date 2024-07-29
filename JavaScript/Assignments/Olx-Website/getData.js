@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
-import { getFirestore, getDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+import { getFirestore, collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -20,24 +20,35 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 // Function to display user data on the browser
-const displayUserData = (userData) => {
-    document.getElementById("userEmail").innerText = userData.Email || 'N/A';
+
+const displayUserData = (userName) => {
+    document.getElementById("userName").innerText = userName || 'N/A';
 };
 
 onAuthStateChanged(auth, async (user) => {
     if (user) {
-        const userDoc = await getDoc(doc(db, "Users Data", user.uid));
-        if (userDoc.exists()) {
-            const userData = userDoc.data();
-            displayUserData(userData);
-        } else {
-            console.log("No such document!");
-        }
+        try {
+            const usersCollection = collection(db, "Users Data");
+            const q = query(usersCollection, where('Email', '==', user.email));
+            const querySnapshot = await getDocs(q);
 
-        document.getElementById("userEmail").innerText = "👋 " + user.email || 'N/A';
+            if (!querySnapshot.empty) {
+                const userData = querySnapshot.docs[0].data();
+                const userName = userData.Name || 'N/A';
+                displayUserData(userName);
+            } else {
+                console.log("No such document!");
+                document.getElementById("userName").innerText = 'N/A';
+            }
+
+        } catch (error) {
+            console.error("Error fetching user document: ", error);
+            document.getElementById("userName").innerText = 'Error fetching data';
+        }
 
     } else {
         console.log("No user is currently signed in.");
+        document.getElementById("userName").innerText = 'No user signed in';
     }
 });
 
