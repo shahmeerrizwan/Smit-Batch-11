@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
-import { getFirestore, getDoc, doc, addDoc, getDocs, collection, query, where } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+import { getFirestore, getDoc, doc, addDoc, getDocs, collection, query, where, Timestamp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-storage.js";
 
 // Firebase configuration
@@ -44,7 +44,6 @@ onAuthStateChanged(auth, async (user) => {
 
 
 
-
 async function addDataToFireStore() {
     const title = document.getElementById('title').value.trim();
     const description = document.getElementById('description').value.trim();
@@ -58,7 +57,6 @@ async function addDataToFireStore() {
     const categoryData = JSON.parse(localStorage.getItem('selectedCategory'));
     const category = categoryData ? categoryData.name : '';
 
-    // Get the currently signed-in user's email
     const user = auth.currentUser;
     const userEmail = user ? user.email : null;
 
@@ -70,14 +68,15 @@ async function addDataToFireStore() {
     try {
         Swal.fire({
             title: "Processing...",
-            text: "Sending Data...",
+            text: "Adding Product...",
             allowOutsideClick: false,
             showConfirmButton: false,
             didOpen: () => Swal.showLoading(),
         });
 
-        // Upload the file to Firebase Storage
-        const storageRef = ref(storage, `images/${Date.now()}_${imageFile.name}`); // Adding a timestamp to avoid filename conflicts
+        // Upload the file to Firebase Storage with a timestamp to avoid filename conflicts
+        const timestamp = Timestamp.now();
+        const storageRef = ref(storage, `images/${Date.now()}_${imageFile.name}`);
         const snapshot = await uploadBytes(storageRef, imageFile);
 
         // Get the URL of the uploaded file
@@ -103,7 +102,7 @@ async function addDataToFireStore() {
             return;
         }
 
-        // Add the document to Firestore
+        // Add the document to Firestore with timestamp metadata
         const docRef = await addDoc(collection(db, "Products"), {
             Title: title,
             Description: description,
@@ -115,7 +114,8 @@ async function addDataToFireStore() {
             Category: category,
             Image: imageUrl,
             UserEmail: userEmail,
-            Name: Name
+            Name: Name,
+            Timestamp: timestamp // Store timestamp in Firestore
         });
 
         console.log("Document written with ID: ", docRef.id);
