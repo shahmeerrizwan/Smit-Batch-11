@@ -52,7 +52,7 @@
             </div>
           </div>
           <label for="name">Add Title</label>
-          <input id="name" placeholder="Add Title" type="text" />
+          <input id="title" placeholder="Add Title" type="text" />
           <label for="description">Description</label>
           <textarea
             id="description"
@@ -63,7 +63,7 @@
           <label for="brand">Brand</label>
           <input id="brand" placeholder="Add Brand" type="text" />
           <label for="brand">Condition</label>
-          <input placeholder="New ? Old" type="text" />
+          <input placeholder="New ? Old" id="condition" type="text" />
           <hr />
           <h4>SET A PRICE</h4>
           <label for="price">Price</label>
@@ -87,15 +87,15 @@
           </div>
           <h4>Lets verify your Account</h4>
           <label for="ptofilePhone">Mobile Phone Number</label>
-          <input type="text" placeholder="Phone Number" id="ptofilePhone" />
+          <input type="text" placeholder="Phone Number" id="phoneNumber" />
           <h4>Want to Show Phone Number Write Yes or No</h4>
           <label for="phoneYes">Yes Or No</label>
-          <input type="text" placeholder="Yes or No " id="phoneYes" />
+          <input type="text" id="yes" placeholder="Yes or No " />
 
           <hr />
         </div>
 
-        <button id="btnSubmit" onclick="addProduct()">Post Now</button>
+        <button class="btnSubmit" id="addDataToFireStore">Post Now</button>
       </div>
       <div class="help-container">
         <div class="txt">
@@ -154,6 +154,7 @@
       }
     </script>
     <script type="module" src="sendData.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

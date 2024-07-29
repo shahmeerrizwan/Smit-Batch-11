@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
-import { getFirestore, getDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+import { getFirestore, getDoc, doc, addDoc, collection } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-storage.js";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -18,6 +19,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+const storage = getStorage(app);
 
 // Function to display user data on the browser
 const displayUserData = (userData) => {
@@ -39,3 +41,94 @@ onAuthStateChanged(auth, async (user) => {
         console.log("No user is currently signed in.");
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function addDataToFireStore() {
+    let title = document.getElementById('title').value;
+    let description = document.getElementById('description').value;
+    let price = document.getElementById('price').value;
+    let condition = document.getElementById('condition').value;
+    let phoneNumber = document.getElementById('phoneNumber').value;
+    let location = document.getElementById('location').value;
+    let brand = document.getElementById('brand').value;
+    let imageFile = document.getElementById('image').files[0];
+
+    if (!title || !price || !description || !imageFile || !brand || !condition || !phoneNumber || !location) {
+        Swal.fire("Validation Error", "All fields are required.", "warning");
+        return;
+    }
+
+    try {
+        Swal.fire({
+            title: "Processing...",
+            text: "Sending Data ...",
+            allowOutsideClick: false,
+            showConfirmButton: false,
+            willOpen: () => {
+                Swal.showLoading();
+            }
+        });
+
+        // Upload the file to Firebase Storage
+        const storageRef = ref(storage, `images/${imageFile.name}`);
+        const snapshot = await uploadBytes(storageRef, imageFile);
+
+        // Get the URL of the uploaded file
+        const imageUrl = await getDownloadURL(snapshot.ref);
+
+        // Add the document to Firestore
+        const docRef = await addDoc(collection(db, "Products"), {
+            Title: title,
+            Description: description,
+            Price: price,
+            Condition: condition,
+            PhoneNumber: phoneNumber,
+            Location: location,
+            Brand: brand,
+            Image: imageUrl
+        });
+
+        console.log("Document written with ID: ", docRef.id);
+
+        await Swal.fire({
+            icon: "success",
+            title: "Product Added Successfully!",
+            showConfirmButton: false,
+            timer: 1500
+        });
+
+        document.getElementById('title').value = '';
+        document.getElementById('description').value = '';
+        document.getElementById('price').value = '';
+        document.getElementById('condition').value = '';
+        document.getElementById('phoneNumber').value = '';
+        document.getElementById('location').value = '';
+        document.getElementById('brand').value = '';
+        document.getElementById('image').value = '';
+        document.getElementById('yes').value = '';
+
+
+
+    } catch (error) {
+        console.error("Error adding document: ", error);
+
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: error.message,
+        });
+    }
+}
+
+document.getElementById("addDataToFireStore").addEventListener("click", addDataToFireStore);

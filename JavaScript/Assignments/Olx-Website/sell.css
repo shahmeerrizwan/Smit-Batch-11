@@ -68,7 +68,7 @@ body {
   width: 250px;
 }
 
-#btnSubmit {
+.btnSubmit {
   padding: 15px 30px;
   background-color: #012f34;
   border: 1px solid #012f34;
