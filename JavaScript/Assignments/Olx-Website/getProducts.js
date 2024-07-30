@@ -72,7 +72,7 @@ async function loadProducts() {
    <div class="card__content">
      <div class="card__content-gap" >
        <div class="name__heart" >
-         <h4>${data.Title.slice(0, 30)}...</h4>
+         <h4>${data.Title.slice(0, 16)}...</h4>
          <i class="fa-solid fa-heart"></i>
        </div>
        <h2>Rs ${data.Price}</h2>

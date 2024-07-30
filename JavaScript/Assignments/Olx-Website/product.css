@@ -6,6 +6,7 @@
   margin-top: 80px;
   margin-bottom: 60px;
   place-items: center;
+  gap: 50px;
 }
 
 .containerr {
@@ -184,6 +185,10 @@ p {
   padding: 5px;
   width: 100%;
 }
+.img :nth-child(1) {
+  text-transform: capitalize;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
 
 .img h5 {
   font-size: 16px;
@@ -214,7 +219,7 @@ p {
   border-radius: 5px;
 }
 .img p {
-  font-size: 20px;
+  font-size: 25px;
 }
 .description {
   width: 98%;
@@ -362,7 +367,7 @@ p {
   flex-direction: column;
   width: 280px;
   cursor: pointer;
-  border: 1.5px solid #002f34;
+  border: 1.5px groove grey;
   border-radius: 5px;
   height: auto;
 }

@@ -4,63 +4,63 @@ import { getFirestore, getDoc, doc } from "https://www.gstatic.com/firebasejs/10
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBZx2BB9f1MIoRcIAyqO2coUuSpfEEpQyw",
-    authDomain: "expertizo-class.firebaseapp.com",
-    databaseURL: "https://expertizo-class-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "expertizo-class",
-    storageBucket: "expertizo-class.appspot.com",
-    messagingSenderId: "409223184847",
-    appId: "1:409223184847:web:a7ca5d1752ba47f9ba52ba",
-    measurementId: "G-LVF3VP0M8Q"
+  apiKey: "AIzaSyBZx2BB9f1MIoRcIAyqO2coUuSpfEEpQyw",
+  authDomain: "expertizo-class.firebaseapp.com",
+  databaseURL: "https://expertizo-class-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "expertizo-class",
+  storageBucket: "expertizo-class.appspot.com",
+  messagingSenderId: "409223184847",
+  appId: "1:409223184847:web:a7ca5d1752ba47f9ba52ba",
+  measurementId: "G-LVF3VP0M8Q"
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 function formatDate(date) {
-    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-    return date.toLocaleDateString('en-US', options);
+  const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+  return date.toLocaleDateString('en-US', options);
 }
 
 async function loadProductDetails() {
-    Swal.fire({
-        title: "Loading Products...",
-        text: "Please wait ",
-        allowOutsideClick: false,
-        showConfirmButton: false,
-        didOpen: () => {
-            Swal.showLoading();
+  Swal.fire({
+    title: "Loading Products...",
+    text: "Please wait ",
+    allowOutsideClick: false,
+    showConfirmButton: false,
+    didOpen: () => {
+      Swal.showLoading();
+    }
+  });
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get('id');
+
+
+
+  if (productId) {
+    try {
+      const productDoc = doc(db, "Products", productId);
+      const docSnap = await getDoc(productDoc);
+
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        const timestamp = data.Timestamp;
+        let formattedDate = "No Date Available";
+
+        if (timestamp) {
+          if (timestamp.toDate) {
+            formattedDate = formatDate(timestamp.toDate());
+          } else if (timestamp instanceof Date) {
+            formattedDate = formatDate(timestamp);
+          } else if (typeof timestamp === 'string') {
+            const parsedDate = new Date(timestamp);
+            if (!isNaN(parsedDate.getTime())) {
+              formattedDate = formatDate(parsedDate);
+            }
+          }
         }
-    });
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('id');
-
-
-
-    if (productId) {
-        try {
-            const productDoc = doc(db, "Products", productId);
-            const docSnap = await getDoc(productDoc);
-
-            if (docSnap.exists()) {
-                const data = docSnap.data();
-                const timestamp = data.Timestamp;
-                let formattedDate = "No Date Available";
-
-                if (timestamp) {
-                    if (timestamp.toDate) {
-                        formattedDate = formatDate(timestamp.toDate());
-                    } else if (timestamp instanceof Date) {
-                        formattedDate = formatDate(timestamp);
-                    } else if (typeof timestamp === 'string') {
-                        const parsedDate = new Date(timestamp);
-                        if (!isNaN(parsedDate.getTime())) {
-                            formattedDate = formatDate(parsedDate);
-                        }
-                    }
-                }
-                const productDetail = document.getElementById('product-detail');
-                productDetail.innerHTML = `
+        const productDetail = document.getElementById('product-detail');
+        productDetail.innerHTML = `
                     
 <div class="productDetails">
       <div class="left__side">
@@ -126,8 +126,8 @@ async function loadProductDetails() {
           <div class="avaar">
             <img src="./Assets/avatar.png" id="image" alt="" />
             <div class="img">
-              <h5 id="phoneL">${data.PhoneNumber}</h5>
-              <p id="nameL">${data.Name}</p>
+            <p id="nameL">${data.Name}</p>
+            <h5 id="phoneL">${data.PhoneNumber}</h5>
               <p class="e-d">${data.UserEmail}</p>
             </div>
           </div>
@@ -151,18 +151,18 @@ async function loadProductDetails() {
     </div>
 
                 `;
-                Swal.close();
-            } else {
-                console.log("No such document!");
-                document.getElementById('product-detail').innerText = 'Product not found.';
-            }
-        } catch (error) {
-            console.error("Error fetching product details: ", error);
-            document.getElementById('product-detail').innerText = 'Error fetching product details.';
-        }
-    } else {
-        document.getElementById('product-detail').innerText = 'No product ID found in URL.';
+        Swal.close();
+      } else {
+        console.log("No such document!");
+        document.getElementById('product-detail').innerText = 'Product not found.';
+      }
+    } catch (error) {
+      console.error("Error fetching product details: ", error);
+      document.getElementById('product-detail').innerText = 'Error fetching product details.';
     }
+  } else {
+    document.getElementById('product-detail').innerText = 'No product ID found in URL.';
+  }
 }
 
 loadProductDetails();
