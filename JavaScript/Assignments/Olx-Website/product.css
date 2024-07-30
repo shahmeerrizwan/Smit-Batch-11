@@ -47,13 +47,11 @@
 }
 .card-1-title h4 {
   text-transform: capitalize;
-  font-family: auto !important;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
 }
 .card-1-title h3 {
-  font-family: auto !important;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
 }
 .cancle {
@@ -66,11 +64,11 @@
 }
 .view-btn {
   padding: 5px 15px;
-  border: 1.5px solid #3a77ff;
+  border: 1.5px solid grey;
   border-radius: 3px;
   text-decoration: none;
-  color: #3a77ff;
-  width: 50%;
+  color: #012f34;
+  font-weight: 600;
   text-align: center;
   cursor: pointer;
 }
@@ -97,12 +95,13 @@
 /* Detailed Page Css */
 
 .productDetails {
-  height: 130vh;
+  height: max-content;
   padding: 20px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: 60px;
+  margin-bottom: 30px;
 }
 
 .left__side {
@@ -123,7 +122,7 @@
   width: 98%;
   margin-top: 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 10px 30px;
+  padding: 10px 8px;
   border: 1.5px solid #002f34;
   border-radius: 6px;
 }
@@ -191,10 +190,13 @@ p {
   padding-left: 10px;
   margin: 0;
 }
-
+#productName {
+  text-transform: capitalize;
+}
 .right__side button {
   padding: 10px 30px;
   width: 100%;
+  font-size: 16px;
   border: 1px solid #012f34;
   background: none;
   margin-top: 10px;
@@ -215,6 +217,14 @@ p {
   font-size: 20px;
 }
 .description {
+  width: 98%;
+  margin-left: 13px;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: 1.5px solid #012f34;
+  border-radius: 6px;
+}
+.descriptionn {
   width: 98%;
   margin-top: 20px;
   padding: 10px 30px;
@@ -238,7 +248,7 @@ p {
   margin-top: 1.6rem;
   overflow: hidden;
   padding: 1.6rem;
-  width: 100%;
+  width: 92%;
 }
 ._5eb397e5 {
   font-size: 2.394rem;
@@ -281,4 +291,138 @@ p {
 ._9a8eacd9 > span {
   -ms-flex-preferred-size: 50%;
   padding-right: 1.6rem;
+}
+.footer_bottomm {
+  background-color: #012f34;
+  padding: 20px;
+  position: absolute;
+  color: white;
+  margin: 0 !important;
+  width: -webkit-fill-available;
+  left: 0;
+}
+.add-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-5 img {
+  width: 90%;
+}
+.right-img img {
+  width: 100%;
+  height: max-content;
+}
+.right-img {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+.e-d {
+  font-size: 13px !important;
+  position: relative;
+  bottom: 5px;
+  color: grey;
+}
+.full-width {
+  width: 100% !important;
+  flex-basis: calc(100% - 1.6rem);
+}
+.img__featured {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #012f34;
+}
+
+.img__featured img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.img__featured {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #012f34;
+}
+.cardd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 280px;
+  cursor: pointer;
+  border: 1.5px solid #002f34;
+  border-radius: 5px;
+  height: auto;
+}
+.name__heart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.featured {
+  position: absolute;
+  bottom: 7px;
+  background-color: #ffce32;
+  text-transform: uppercase;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  right: -11px;
+  width: 27%;
+  height: 30px;
+  top: -4px;
+}
+.card__content {
+  width: 100%;
+  padding: 10px;
+}
+.card__content h2 {
+  font-weight: 700;
+  font-size: 22px;
+  margin-top: 10px;
+}
+.card__content h6 {
+  font-size: 12px;
+  color: grey;
+  margin-top: 5px;
+}
+.card__content h5 {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.card__content-gap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.name__heart h4 {
+  font-size: 22px;
+  font-weight: 700;
+}
+.name__heart h2 {
+  font-size: 18px !important;
+  font-weight: 700;
+}
+#description {
+  line-height: 25px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 500 !important;
 }

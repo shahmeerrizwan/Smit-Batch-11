@@ -6,11 +6,15 @@
     <link rel="stylesheet" href="product.css" />
     <title>MSR OLX</title>
     <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="footer.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+    <style>
+      body{
+        padding-top: 90px !important;
+      }
+    </style>
   </head>
   <body>
     <!-- NAVBAR CODE START -->
@@ -29,100 +33,21 @@
       </div>
     </div>
     <!-- NAVBAR CODE END -->
-    <!-- <div id="product-detail" class="product-detail"></div> -->
-    <div class="productDetails">
-      <div class="left__side">
-        <img
-          id="main"
-          src="https://static-01.daraz.pk/p/37cd9cf9ea23a97b7d3097bfd9a03347.jpg_720x720.jpg_.webp"
-          alt="    "
-        />
-        <div class="price__location_card">
-          <h1 id="price">RS 65,000</h1>
-          <h3 id="productName">Mobile Charger</h3>
-          <p id="location">
-            <i class="fa-solid fa-location-dot"></i>Jamshed Town, Karachi
-          </p>
-        </div>
-        <div class="_2961c394" aria-label="Details">
-          <div class="_5eb397e5">Details</div>
-          <div class="a9c966f1 undefined">
-            <div class="_92439ac7">
-              <div class="_9a8eacd9"><span>Make</span><span>Suzuki</span></div>
-            </div>
-            <div class="_92439ac7">
-              <div class="_9a8eacd9"><span>Model</span><span>Alto</span></div>
-            </div>
-            <div class="_92439ac7">
-              <div class="_9a8eacd9">
-                <span>Body Type</span><span>Hatchback</span>
-              </div>
-            </div>
-            <div class="_92439ac7">
-              <div class="_9a8eacd9">
-                <span>Air Conditioning</span
-                ><span>Automatic air conditioning</span>
-              </div>
-            </div>
-            <div class="_92439ac7">
-              <div class="_9a8eacd9">
-                <span>Color</span><span>Burgundy</span>
-              </div>
-            </div>
-            <div class="_92439ac7">
-              <div class="_9a8eacd9">
-                <span>Interior</span><span>Other</span>
-              </div>
-            </div>
-            <div class="_92439ac7">
-              <div class="_9a8eacd9">
-                <span>Registration city</span><span>Unregistered</span>
-              </div>
-            </div>
-            <div class="_92439ac7">
-              <div class="_9a8eacd9">
-                <span>Car documents</span><span>Original</span>
-              </div>
-            </div>
-            <div class="_92439ac7">
-              <div class="_9a8eacd9">
-                <span>Assembly</span><span>Imported</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="description">
-          <h1>Description</h1>
-          <p id="description">Suzuki bolan 2011 model 032l269l904</p>
-        </div>
+     <!-- ADD CODE -->
+      <div class="add-5">
+
+        <img  src="./Assets/add-6.jpg" alt="">
       </div>
-      <div class="right__side">
-        <div class="profile_contact_card">
-          <div class="avaar">
-            <img src="./Assets/avatar.png" id="image" alt="" />
-            <div class="img">
-              <h5 id="phoneL">03456276164</h5>
-              <p id="nameL">Kashan Adnan</p>
-            </div>
-          </div>
-          <button class="num-color">
-            <i class="fa-solid fa-phone"></i> 03243217819
-          </button>
-          <button class="chat">
-            <i class="fa-solid fa-comments"></i> Chat
-          </button>
-        </div>
-        <div class="description">
-          <h1>Loaction</h1>
-          <p id="description2">
-            <i class="fa-solid fa-location-dot"></i> Karachi , Pakistan
-          </p>
-        </div>
-      </div>
-    </div>
+     <!-- ADD CODE -->
+
+    <div id="product-detail" class="product-detail"></div>
+
+  
+        
+   
 <!-- FOOTER CODE START  -->
 
-    <div class="footer_bottom gap">
+    <div class="footer_bottomm gap">
       <span class="r-f">
         <span class="b-text"> Free Classifieds in Pakistan .</span> ©
         2006-2024 OLX
@@ -131,6 +56,12 @@
   </div>
 </footer>
 <!-- FOOTER CODE END  -->
+ <script>
+  function goToDashboard() {
+    window.location.href = 'dashboard.html'
+}
+ </script>
     <script type="module" src="detail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

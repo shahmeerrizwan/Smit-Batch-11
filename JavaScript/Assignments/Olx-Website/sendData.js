@@ -53,6 +53,7 @@ async function addDataToFireStore() {
     const location = document.getElementById('location').value.trim();
     const brand = document.getElementById('brand').value.trim();
     const imageFile = document.getElementById('image').files[0];
+    const year = document.getElementById('yes').value
 
     const categoryData = JSON.parse(localStorage.getItem('selectedCategory'));
     const category = categoryData ? categoryData.name : '';
@@ -60,7 +61,7 @@ async function addDataToFireStore() {
     const user = auth.currentUser;
     const userEmail = user ? user.email : null;
 
-    if (!title || !price || !description || !imageFile || !brand || !condition || !phoneNumber || !location || !category || !userEmail) {
+    if (!title || !price || !description || !imageFile || !brand || !condition || !phoneNumber || !location || !category || !userEmail || !year) {
         Swal.fire("Validation Error", "All fields are required.", "warning");
         return;
     }
@@ -115,6 +116,7 @@ async function addDataToFireStore() {
             Image: imageUrl,
             UserEmail: userEmail,
             Name: Name,
+            Year: year,
             Timestamp: timestamp // Store timestamp in Firestore
         });
 
@@ -136,7 +138,7 @@ async function addDataToFireStore() {
         document.getElementById('brand').value = '';
         document.getElementById('image').value = '';
         document.getElementById('yes').value = '';
-
+        window.location.href = 'category.html'
     } catch (error) {
         Swal.fire({
             icon: "error",

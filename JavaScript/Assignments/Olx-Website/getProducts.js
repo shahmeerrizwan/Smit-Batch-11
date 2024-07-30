@@ -64,32 +64,24 @@ async function loadProducts() {
       const card = document.createElement('div');
       card.className = 'cardd';
       card.innerHTML = `
-        <div class="containerr">
-          <div class="card-1">
-            <img src="${data.Image}" alt="${data.Title}" />
-            <div class="card-1-body">
-              <div class="row-1">
-                <div class="card-1-title">
-                  <h4>${data.Title.slice(0, 30)}...</h4>
-                  <h3>$${data.Price}</h3>
-                </div>
-                <div class="view-btn" data-id="${docId}">
-                  View Details
-                </div>
-              </div>
-              <hr />
-              <p>Added on: ${formattedDate}</p>
-              <hr />
-              <p>${data.Description.slice(0, 40)}...</p>
-              <div class="btnn-group">
-                <div class="btnn" data-id="${docId}">
-                  Buy Now
-                </div>
-                <a href="/" class="cancle">Cancel</a>
-              </div>
-            </div>
-          </div>
-        </div>
+       <div class="cardd" >
+   <div class="img__featured">
+     <img class="m_shah" src="${data.Image}" alt="">
+       <p class="featured">featured</p>
+   </div>
+   <div class="card__content">
+     <div class="card__content-gap" >
+       <div class="name__heart" >
+         <h4>${data.Title.slice(0, 30)}...</h4>
+         <i class="fa-solid fa-heart"></i>
+       </div>
+       <h2>Rs ${data.Price}</h2>
+     </div>
+     <h5>${data.Location}</h5>
+     <h6>${formattedDate}</h6>
+     <button class="view-btn" data-id="${doc.id}">Go To Detailed</button>
+   </div>
+ </div>
       `;
       productList.appendChild(card);
     });
@@ -120,9 +112,7 @@ document.getElementById('product-list').addEventListener('click', (event) => {
     if (target.classList.contains('view-btn')) {
       // View Details Button
       window.location.href = `detail.html?id=${productId}`;
-    } else if (target.classList.contains('btnn')) {
-      // Buy Now Button
-      window.location.href = `detail.html?id=${productId}`; // Redirect to detailed page
     }
   }
 });
+
