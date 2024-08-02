@@ -34,8 +34,11 @@ onAuthStateChanged(auth, async (user) => {
         } else {
             console.log("No such document!");
         }
+        const data = document.getElementById("userEmail1")
+        if (data) {
+            data.innerText = user.email || 'N/A';
+        }
 
-        document.getElementById("userEmail1").innerText = user.email || 'N/A';
 
     } else {
         console.log("No user is currently signed in.");
@@ -149,4 +152,8 @@ async function addDataToFireStore() {
     }
 }
 
-document.getElementById("addDataToFireStore").addEventListener("click", addDataToFireStore);
+let clicked = document.getElementById("addDataToFireStore")
+
+if (clicked) {
+    clicked.addEventListener("click", addDataToFireStore);
+}

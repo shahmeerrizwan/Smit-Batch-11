@@ -170,7 +170,7 @@ p {
   align-items: center;
   margin: 30px;
   width: 100%;
-  height: 190px;
+  height: max-content;
   flex-direction: column;
   padding: 20px;
   padding-bottom: 40px;
