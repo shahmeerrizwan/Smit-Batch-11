@@ -25,6 +25,8 @@ const storage = getStorage(app);
 const displayUserData = (userData) => {
     document.getElementById("userEmail1").innerText = userData.Email || 'N/A';
 };
+
+const pathName = window.location.pathname
 onAuthStateChanged(auth, async (user) => {
     if (user) {
         const userDoc = await getDoc(doc(db, "Users Data", user.uid));
@@ -39,12 +41,18 @@ onAuthStateChanged(auth, async (user) => {
             data.innerText = user.email || 'N/A';
         }
 
-
     } else {
+        window.location.href = 'index.html';
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "User not found ",
+        });
         console.log("No user is currently signed in.");
     }
 });
 
+console.log(pathName);
 
 
 async function addDataToFireStore() {
