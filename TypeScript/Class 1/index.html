@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS and JavaScript Example</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body class="bg-gray-100 text-center min-h-screen">
+    <!-- Toast Notification -->
+    <audio id="notificationSound" src="horse.ogv" preload="auto"></audio>
+
+    <div
+      id="toast"
+      class="fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg opacity-0 transition-opacity duration-300 pointer-events-none"
+    >
+      <p id="toastMessage">This is a dummy notification!</p>
+    </div>
+
+    <h1 class="text-3xl font-bold mb-4 mt-64">Welcome to Tailwind CSS!</h1>
+    <button
+      onclick="Notify()"
+      class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300"
+    >
+      Click Me
+    </button>
+  </body>
+</html>
