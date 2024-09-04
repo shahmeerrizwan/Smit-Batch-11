@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: serif;
+}
+body {
+  display: grid;
+  min-height: 100%;
+  place-items: center;
+  background-color: #eff4f5;
+}
+.main {
+  height: 350px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 15px rgb(192, 183, 183), -10px -10px 15px white;
+}
+h2 {
+  font-size: 3rem;
+}
+#counter {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: green;
+  font-weight: 600;
+}
+.btn {
+  box-shadow: 4px 1px 7px grey;
+  border-radius: 4px;
+  border: 2px solid black;
+  height: 25px;
+  margin: 10px;
+  width: 55px;
+}
