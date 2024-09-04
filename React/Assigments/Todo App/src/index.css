@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+  background-color: whitesmoke;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+input {
+  width: 350px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.main {
+  height: 450px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  align-items: center;
+  border-radius: 20px;
+  margin: auto;
+  position: relative;
+  top: 80px;
+  box-shadow: 10px 10px 8px rgb(103, 103, 103),
+    inset -5px 7px 142px rgb(137, 137, 137);
+  overflow: hidden;
+}
+.App-header {
+  margin-bottom: 120px;
+}
+h2 {
+  font-size: 3rem;
+  color: rgb(0, 0, 0);
+  text-shadow: 10px 0px 10px white;
+  text-align: center;
+}
+#counter {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: green;
+  font-weight: 600;
+}
+.btn {
+  background: #000;
+  border: 3px solid transparent;
+  border-radius: 4px;
+  box-shadow: 2px 2px 3px #999;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1.75;
+  padding: 2px 25px;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 3px solid black;
+  transition: 0.4s;
+}
+input {
+  height: 15px;
+}
+li {
+  font-size: 19px;
+  font-weight: 600;
+  list-style: decimal-leading-zero;
+  color: rgb(0, 0, 0);
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 768px) {
+  .App-header {
+    margin-bottom: 73px;
+  }
+  .main {
+    height: 387px;
+    width: 431px;
+    top: 160px;
+  }
+  input {
+    width: 208px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .App-header {
+    margin-bottom: 7px;
+  }
+  .main {
+    height: 327px;
+    width: 335px;
+    top: 120px;
+  }
+  input {
+    width: 153px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .btn {
+    height: 35px;
+    margin-bottom: 22px;
+    width: 68px;
+  }
+  li {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
