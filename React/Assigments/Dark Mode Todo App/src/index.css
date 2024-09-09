@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(197, 182, 182);
+  display: flex;
+}
+.todo {
+  width: 25%;
+  height: 80vh;
+  background-color: white;
+  border-radius: 30px;
+  margin: auto;
+  border-color: 2px solid white !important;
+}
+.div-1 {
+  width: 100%;
+  border-radius: 30px;
+  height: 30vh;
+  background-image: url("https://wallpapershome.com/images/pages/pic_h/25483.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+.in {
+  width: 60%;
+  position: relative;
+  top: 5%;
+  margin-left: 20px;
+}
+.div-1 h4 {
+  color: white;
+  font-size: 25px;
+}
+.div-1 h1 {
+  color: white;
+  font-size: 55px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.div-1 p {
+  color: white;
+  margin-left: 10px;
+  letter-spacing: 2px;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.left {
+  font-size: 12px;
+  font-weight: 700;
+}
+.right button {
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 600;
+}
+.list {
+  margin-left: 20px;
+}
+.list input {
+  width: 60%;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.list button {
+  border: 2px solid rgb(29, 28, 29);
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+.btn {
+  width: 70px;
+}
