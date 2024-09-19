@@ -15,12 +15,9 @@ export default function Quiz() {
           "https://opentdb.com/api.php?amount=20&category=9&difficulty=easy&type=multiple"
         );
         const formattedQuestions = response.data.results.map((question) => ({
-          ...question,
-          options: [
-            ...question.incorrect_answers,
-            question.correct_answer,
-          ]
-        }));
+            ...question,
+            options: [...question.incorrect_answers, question.correct_answer].sort(() => Math.random() - 0.5),
+          }));
         setQuestions(formattedQuestions);
       } catch (error) {
         console.error("Error fetching questions:", error);
@@ -75,13 +72,9 @@ export default function Quiz() {
             <>
               <div className="p-2 mb-3 bg-light rounded shadow">
                 <p className="text-center fw-semibold">
-                  Question {currentIndex + 1} / {questions.length}
+                Question {currentIndex + 1} / {questions.length}
                 </p>
-                <h3
-                  dangerouslySetInnerHTML={{
-                    __html: questions[currentIndex].question,
-                  }}
-                />
+                <h3> {currentIndex+1})  {questions[currentIndex].question}</h3>
               </div>
               <div className="row fw-semibold">
                 {questions[currentIndex].options.map((option, i) => (
