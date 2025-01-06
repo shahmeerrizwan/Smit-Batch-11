@@ -1,19 +1,21 @@
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
+import db from './config/db.js'
 import 'dotenv/config'
 
 const app = express();
-app.use(express.json());
-app.use(cors());
-app.use(morgan('short'));
 
-
-const { Port, Mongo_DB_Url } = process.env;
-
+const { Port } = process.env;
 
 app.listen(Port, () => {
     console.log(`Server Started on Port ${Port}`);
 });
 
-export { Port, Mongo_DB_Url };
+db.connection.once("open", () => {
+    console.log("DB connected");
+})
+
+app.use(express.json());
+app.use(cors());
+app.use(morgan('short'));

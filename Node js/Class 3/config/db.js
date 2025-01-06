@@ -1,11 +1,13 @@
 import mongoose from 'mongoose';
-import { Mongo_DB_Url } from '..';
+import 'dotenv/config'
 
-try {
-    mongoose.connet(Mongo_DB_Url)
-    console.log("Mongo DB Connected");
-} catch (error) {
-    console.log("Connection Failed");
-}
+const { Mongo_DB_Url } = process.env;
+
+mongoose.connect(Mongo_DB_Url, {
+}).then(() => {
+    console.log("MongoDB connected successfully!");
+}).catch((err) => {
+    console.error("MongoDB connection Failed");
+});
 
 export default mongoose;
