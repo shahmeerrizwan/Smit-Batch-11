@@ -3,6 +3,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import db from './config/db.js'
 import 'dotenv/config'
+import router from './routes/index.js';
 
 const app = express();
 
@@ -16,6 +17,8 @@ db.connection.once("open", () => {
     console.log("DB connected");
 })
 
+app.use(express.urlencoded());
 app.use(express.json());
 app.use(cors());
 app.use(morgan('short'));
+app.use("/", router);
