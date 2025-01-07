@@ -2,8 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import db from './config/db.js'
-import 'dotenv/config'
 import router from './routes/index.js';
+import 'dotenv/config'
 
 const app = express();
 
