@@ -6,7 +6,7 @@ const { Mongo_DB_Url } = process.env;
 mongoose.connect(Mongo_DB_Url, {
 }).then(() => {
     console.log("MongoDB connected successfully!");
-}).catch((err) => {
+}).catch(() => {
     console.error("MongoDB connection Failed");
 });
 
