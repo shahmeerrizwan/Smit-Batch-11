@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-async function sendEmail(recipientEmail, token) {
+const sendEmail = async (recipientEmail, token) => {
     console.log('Sending email to:', recipientEmail);
 
     const htmlTemplate = `
