@@ -4,17 +4,17 @@ import 'dotenv/config';
 const { senderEmail, senderPassword } = process.env;
 
 const transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-        user: senderEmail,
-        pass: senderPassword,
-    },
+  service: 'Gmail',
+  auth: {
+    user: senderEmail,
+    pass: senderPassword,
+  },
 });
 
 const sendEmail = async (recipientEmail, token) => {
-    console.log('Sending email to:', recipientEmail);
+  console.log('Sending email to:', recipientEmail);
 
-    const htmlTemplate = `
+  const htmlTemplate = `
     <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
       <table style="max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
         <tr>
@@ -46,20 +46,20 @@ const sendEmail = async (recipientEmail, token) => {
     </div>
   `;
 
-    const mailOptions = {
-        from: `${senderEmail}`,
-        to: recipientEmail,
-        subject: 'Verify Your Email Address',
-        html: htmlTemplate,
-    };
+  const mailOptions = {
+    from: `${senderEmail}`,
+    to: recipientEmail,
+    subject: 'Verify Your Email Address',
+    html: htmlTemplate,
+  };
 
-    try {
-        const info = await transporter.sendMail(mailOptions);
-        console.log('Email sent successfully:', info.messageId);
-    } catch (error) {
-        console.error('Error sending email:', error);
-        throw new Error('Failed to send email');
-    }
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Email sent successfully:', info.messageId);
+  } catch (error) {
+    console.error('Error sending email:', error);
+    throw new Error('Failed to send email');
+  }
 }
 
 export default sendEmail;
