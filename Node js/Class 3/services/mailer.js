@@ -12,7 +12,6 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendEmail = async (recipientEmail, token) => {
-  console.log('Sending email to:', recipientEmail);
 
   const htmlTemplate = `
     <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
@@ -54,10 +53,8 @@ const sendEmail = async (recipientEmail, token) => {
   };
 
   try {
-    const info = await transporter.sendMail(mailOptions);
-    console.log('Email sent successfully:', info.messageId);
+    await transporter.sendMail(mailOptions);
   } catch (error) {
-    console.error('Error sending email:', error);
     throw new Error('Failed to send email');
   }
 }

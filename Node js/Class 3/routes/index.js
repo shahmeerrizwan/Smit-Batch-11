@@ -4,8 +4,8 @@ import sendEmail from './sendEmail.js';
 
 
 const router = express.Router();
-router.use('/user', user);
-router.use('/auth', sendEmail);
+router.use('/auth', user);
+router.use('/verification', sendEmail);
 
 
 export default router;

@@ -71,24 +71,51 @@ router.post("/signup", async (req, res) => {
 
 
 router.post("/login", async (req, res) => {
+
     try {
-        const user = await User.findOne({ email: req.body.email });
+        const { email, password } = req.body;
+
+        if (!email || !password) {
+            return res.status(400).json({ message: "Email and password are required." });
+        }
+
+        if (!email) {
+            return res.status(400).json({ message: "Email are required." });
+        }
+
+        if (!password) {
+            return res.status(400).json({ message: "Password are required." });
+        }
+
+        const user = await User.findOne({ email: email });
         if (!user) {
             return res.status(404).json({ message: "User not found" });
         }
 
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            return res.status(400).json({ message: "Invalid email format." });
+        }
+
         const isPasswordValid = await bcrypt.compare(
-            req.body.password,
+            password,
             user.password
         );
+
         if (!isPasswordValid) {
             return res.status(400).json({ message: "Wrong Password." });
         }
+
         delete user.password;
         const token = jwt.sign({ id: user._id, email: user.email, userName: user.userName }, tokenSecret);
+        const userResponse = {
+            id: user._id,
+            email: user.email,
+            userName: user.userName,
+        };
         res.status(200).json({
             message: "Login successfully",
-            user: { email: user.email, id: user._id },
+            user: userResponse,
             token: token
         });
     } catch (error) {
