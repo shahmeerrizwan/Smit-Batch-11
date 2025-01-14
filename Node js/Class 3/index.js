@@ -3,6 +3,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import db from './config/db.js'
 import router from './routes/index.js';
+import cookieParser from "cookie-parser";
 import 'dotenv/config'
 
 const app = express();
@@ -17,8 +18,10 @@ db.connection.once("open", () => {
     console.log("DB connected");
 })
 
-app.use(express.urlencoded({ extended: false }))
+
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 app.use(cors());
 app.use(morgan('short'));
 app.use("/", router);

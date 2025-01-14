@@ -6,26 +6,18 @@ import sendEmail from "../services/mailer.js";
 import "dotenv/config";
 
 const router = express.Router();
-const { tokenSecret } = process.env;
+const { tokenSecret, NODE_ENV } = process.env;
 
 router.post("/signup", async (req, res) => {
     try {
         const { userName, email, password } = req.body;
-
-        if (!userName) {
-            return res.status(400).json({ message: "User Name are required." });
+        console.log({ userName }, { email }, { password })
+        if (!userName || !email || !password) {
+            return res.status(400).json({ message: "Empty Input Feilds." });
         }
-        if (!email) {
-            return res.status(400).json({ message: "Email are required." });
-        }
-
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             return res.status(400).json({ message: "Invalid email format." });
-        }
-
-        if (!password) {
-            return res.status(400).json({ message: "Password are required." });
         }
 
         if (password.length < 6) {
@@ -53,9 +45,8 @@ router.post("/signup", async (req, res) => {
         newUser.token = verificationToken;
         const savedUser = await newUser.save();
         await sendEmail(email, verificationToken);
-
         return res.status(201).json({
-            message: "Verification email sent successfully. Check your email.",
+            message: "Verification email sent successfully. Check your inbox.",
             verificationToken,
             user: {
                 id: savedUser._id,
@@ -108,6 +99,11 @@ router.post("/login", async (req, res) => {
             email: user.email,
             userName: user.userName,
         };
+        res.cookie("authToken", token, {
+            httpOnly: true,
+            secure: NODE_ENV,
+            sameSite: "strict",
+        });
         res.status(200).json({
             message: "Login successful.",
             user: userResponse,

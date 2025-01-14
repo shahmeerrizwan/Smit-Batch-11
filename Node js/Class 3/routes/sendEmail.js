@@ -18,6 +18,7 @@ router.post('/sendEmail', async (req, res) => {
     }
 });
 
+
 router.post('/verifyEmail', async (req, res) => {
     try {
         const { token } = req.headers;
