@@ -8,13 +8,25 @@ const router = express.Router();
 
 const { tokenSecret } = process.env;
 
-router.post('/sendEmail', async (req, res) => {
-    const { email, token } = req.body;
+router.post("/sendEmail", async (req, res) => {
+    const { email } = req.body;
+
     try {
+        const user = await User.findOne({ email });
+        if (!user) {
+            return res.status(404).json({ message: "User not found." });
+        }
+
+        if (user.verifiedEmail) {
+            return res.status(400).json({ message: "Email already verified." });
+        }
+
+        const token = jwt.sign({ id: user._id, email: user.email }, tokenSecret, { expiresIn: "1h" });
         await sendEmail(email, token);
-        res.status(200).json({ message: 'Verification email sent successfully.' });
+
+        res.status(200).json({ message: "Verification email resent successfully." });
     } catch (error) {
-        res.status(500).json({ message: 'Failed to send verification email.', error: error.message });
+        res.status(500).json({ message: "Failed to resend verification email.", error: error.message });
     }
 });
 
