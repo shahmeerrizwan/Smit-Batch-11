@@ -1,9 +1,9 @@
 import express from "express";
 import bcrypt from "bcrypt";
-import jwt from 'jsonwebtoken';
+import jwt from "jsonwebtoken";
 import User from "../model/User.js";
 import sendEmail from "../services/mailer.js";
-import 'dotenv/config';
+import "dotenv/config";
 
 const router = express.Router();
 const { tokenSecret } = process.env;
@@ -12,19 +12,16 @@ router.post("/signup", async (req, res) => {
     try {
         const { userName, email, password } = req.body;
 
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            return res.status(400).json({ message: "Invalid email format." });
-        }
-
-        if (!email || !password) {
-            return res.status(400).json({ message: "Email and password are required." });
-        }
         if (!userName) {
             return res.status(400).json({ message: "User Name are required." });
         }
         if (!email) {
             return res.status(400).json({ message: "Email are required." });
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            return res.status(400).json({ message: "Invalid email format." });
         }
 
         if (!password) {
@@ -53,7 +50,7 @@ router.post("/signup", async (req, res) => {
             tokenSecret,
             { expiresIn: "1h" }
         );
-        newUser.token = verificationToken
+        newUser.token = verificationToken;
         const savedUser = await newUser.save();
         await sendEmail(email, verificationToken);
 
@@ -66,7 +63,6 @@ router.post("/signup", async (req, res) => {
             },
         });
     } catch (error) {
-        console.error("Error during signup:", error);
         return res.status(500).json({
             message: "Internal server error.",
             error: error.message,
@@ -74,15 +70,9 @@ router.post("/signup", async (req, res) => {
     }
 });
 
-
 router.post("/login", async (req, res) => {
-
     try {
         const { email, password } = req.body;
-
-        if (!email || !password) {
-            return res.status(400).json({ message: "Email and password are required." });
-        }
 
         if (!email) {
             return res.status(400).json({ message: "Email are required." });
@@ -102,17 +92,17 @@ router.post("/login", async (req, res) => {
             return res.status(404).json({ message: "User not found" });
         }
 
-        const isPasswordValid = await bcrypt.compare(
-            password,
-            user.password
-        );
+        const isPasswordValid = await bcrypt.compare(password, user.password);
 
         if (!isPasswordValid) {
             return res.status(400).json({ message: "Wrong Password." });
         }
 
         delete user.password;
-        const token = jwt.sign({ id: user._id, email: user.email, userName: user.userName }, tokenSecret);
+        const token = jwt.sign(
+            { id: user._id, email: user.email, userName: user.userName },
+            tokenSecret
+        );
         const userResponse = {
             id: user._id,
             email: user.email,
@@ -121,7 +111,7 @@ router.post("/login", async (req, res) => {
         res.status(200).json({
             message: "Login successful.",
             user: userResponse,
-            token: token
+            token: token,
         });
     } catch (error) {
         res.status(500).json({
