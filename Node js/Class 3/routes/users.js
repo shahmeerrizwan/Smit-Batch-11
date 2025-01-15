@@ -40,11 +40,13 @@ router.post("/signup", async (req, res) => {
         const verificationToken = jwt.sign(
             { email, userName, id: newUser.id },
             tokenSecret,
-            { expiresIn: "1h" }
         );
-        newUser.token = verificationToken;
         const savedUser = await newUser.save();
         await sendEmail(email, verificationToken);
+        res.cookie("authToken", verificationToken, {
+            httpOnly: true,
+            secure: NODE_ENV === 'production',
+        });
         return res.status(201).json({
             message: "Verification email sent successfully. Check your inbox.",
             verificationToken,
@@ -101,8 +103,7 @@ router.post("/login", async (req, res) => {
         };
         res.cookie("authToken", token, {
             httpOnly: true,
-            secure: NODE_ENV,
-            sameSite: "strict",
+            secure: NODE_ENV === 'production',
         });
         res.status(200).json({
             message: "Login successful.",
