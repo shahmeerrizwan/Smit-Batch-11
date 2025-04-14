@@ -2,7 +2,7 @@
 //     document.write("hello world");
 // }
 
-// var arr = ["karachi", "lahore", "islamabad", "pindi"]
+// var arr = ["karachi", "lahore", "islamabad", "pindi" , "HYD"]
 // var cityName = prompt("Enter city name: ");
 // var cityFound = false;
 // for (var i = 0; i < arr.length; i++) {
